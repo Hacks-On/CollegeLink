@@ -1,64 +1,160 @@
 package com.example.collegelink;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ChatboxFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class ChatboxFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    FirebaseAuth firebaseAuth;
+    RecyclerView recyclerView;
+    List<ModelChatlist> chatListList;
+    List<ModelUsers> usersList;
+    DatabaseReference reference;
+    FirebaseUser firebaseUser;
+    AdapterChatList adapterChatList;
+    List<ModelChat> chatList;
 
     public ChatboxFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ChatboxFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ChatboxFragment newInstance(String param1, String param2) {
-        ChatboxFragment fragment = new ChatboxFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chatbox, container, false);
+        View view = inflater.inflate(R.layout.fragment_chatbox, container, false);
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        // getting current user
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        recyclerView = view.findViewById(R.id.chatlistrecycle);
+        chatListList = new ArrayList<>();
+        chatList = new ArrayList<>();
+        reference = FirebaseDatabase.getInstance().getReference("ChatList").child(firebaseUser.getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                chatListList.clear();
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    ModelChatlist modelChatList = ds.getValue(ModelChatlist.class);
+                    if (!modelChatList.getId().equals(firebaseUser.getUid())) {
+                        chatListList.add(modelChatList);
+                    }
+
+                }
+                loadChats();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        return view;
+
     }
+
+    // loading the user chat layout using chat node
+    private void loadChats() {
+        usersList = new ArrayList<>();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                usersList.clear();
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                    ModelUsers user = dataSnapshot1.getValue(ModelUsers.class);
+                    for (ModelChatlist chatList : chatListList) {
+                        if (user.getUid() != null && user.getUid().equals(chatList.getId())) {
+                            usersList.add(user);
+                            break;
+                        }
+                    }
+                    adapterChatList = new AdapterChatList(getActivity(), usersList);
+                    recyclerView.setAdapter(adapterChatList);
+
+                    // getting last message of the user
+                    for (int i = 0; i < usersList.size(); i++) {
+                        lastMessage(usersList.get(i).getUid());
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void lastMessage(final String uid) {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Chats");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String lastmess = "default";
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                    ModelChat chat = dataSnapshot1.getValue(ModelChat.class);
+                    if (chat == null) {
+                        continue;
+                    }
+                    String sender = chat.getSender();
+                    String receiver = chat.getReceiver();
+                    if (sender == null || receiver == null) {
+                        continue;
+                    }
+                    // checking for the type of message if
+                    // message type is image then set
+                    // last message as sent a photo
+                    if (chat.getReceiver().equals(firebaseUser.getUid()) &&
+                            chat.getSender().equals(uid) ||
+                            chat.getReceiver().equals(uid) &&
+                                    chat.getSender().equals(firebaseUser.getUid())) {
+                        if (chat.getType().equals("images")) {
+                            lastmess = "Sent a Photo";
+                        } else {
+                            lastmess = chat.getMessage();
+                        }
+                    }
+                }
+                adapterChatList.setlastMessageMap(uid, lastmess);
+                adapterChatList.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+        super.onCreate(savedInstanceState);
+    }
+
 }

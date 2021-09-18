@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.nav_chat:
                     actionBar.setTitle("Chats");
-                    ChatboxFragment listFragment = new ChatboxFragment();
+                    com.example.collegelink.ChatboxFragment listFragment = new com.example.collegelink.ChatboxFragment();
                     FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction3.replace(R.id.content, listFragment, "");
                     fragmentTransaction3.commit();

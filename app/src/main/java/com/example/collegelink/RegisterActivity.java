@@ -96,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
                     DatabaseReference reference = database.getReference("Users");
                     reference.child(uid).setValue(hashMap);
                     Toast.makeText(RegisterActivity.this, "Registered User " + user.getEmail(), Toast.LENGTH_LONG).show();
-                    Intent mainIntent = new Intent(RegisterActivity.this, MainActivity.class);
+                    Intent mainIntent = new Intent(RegisterActivity.this, SkillPage.class);
                     mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(mainIntent);
                     finish();
