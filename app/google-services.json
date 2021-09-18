@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "363960327584",
+    "firebase_url": "https://college-link-default-rtdb.firebaseio.com",
+    "project_id": "college-link",
+    "storage_bucket": "college-link.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363960327584:android:91d6530b41f0258ad118c5",
+        "android_client_info": {
+          "package_name": "com.example.college"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363960327584-98q5gt2mr87hj0u3lubppbvja6ancpb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPGvgMOjoas6WNZm-wzJ-KVVwW_ySJve4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363960327584-98q5gt2mr87hj0u3lubppbvja6ancpb2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363960327584:android:6fe2410712a77f71d118c5",
+        "android_client_info": {
+          "package_name": "com.example.college_linkedin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363960327584-98q5gt2mr87hj0u3lubppbvja6ancpb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPGvgMOjoas6WNZm-wzJ-KVVwW_ySJve4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363960327584-98q5gt2mr87hj0u3lubppbvja6ancpb2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363960327584:android:8b982834e8e728e6d118c5",
+        "android_client_info": {
+          "package_name": "com.example.collegelink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363960327584-98q5gt2mr87hj0u3lubppbvja6ancpb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPGvgMOjoas6WNZm-wzJ-KVVwW_ySJve4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363960327584-98q5gt2mr87hj0u3lubppbvja6ancpb2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
