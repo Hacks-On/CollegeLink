@@ -1,5 +1,7 @@
 package com.example.collegelink;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -25,12 +27,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         actionBar = getSupportActionBar();
-        actionBar.setTitle("Profile Activity");
+        actionBar.setTitle("College Link");
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         //firebaseAuth = FirebaseAuth.getInstance();
 
         navigationView = findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(selectedListener);
-        actionBar.setTitle("Home");
+        //actionBar.setTitle("Home");
 
         // When we open the application first
         // time the fragment should be shown to the user
@@ -48,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.nav_home:
                     actionBar.setTitle("Home");
+                    ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+                    actionBar.setBackgroundDrawable(colorDrawable);
                     HomeFragment fragment = new HomeFragment();
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.content, fragment, "");
@@ -56,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.nav_profile:
                     actionBar.setTitle("Profile");
+                    colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+                    actionBar.setBackgroundDrawable(colorDrawable);
                     ProfileFragment fragment1 = new ProfileFragment();
                     FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction1.replace(R.id.content, fragment1);
@@ -64,7 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.nav_notifications:
                     actionBar.setTitle("Notifications");
-                    NotificationsFragment fragment2 = new NotificationsFragment();
+                    colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+                    actionBar.setBackgroundDrawable(colorDrawable);
+                    UsersFragment fragment2 = new UsersFragment();
                     FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction2.replace(R.id.content, fragment2, "");
                     fragmentTransaction2.commit();
@@ -72,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.nav_chat:
                     actionBar.setTitle("Chats");
+                    colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+                    actionBar.setBackgroundDrawable(colorDrawable);
                     com.example.collegelink.ChatboxFragment listFragment = new com.example.collegelink.ChatboxFragment();
                     FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction3.replace(R.id.content, listFragment, "");
@@ -80,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.nav_addpost:
                     actionBar.setTitle("Add Post");
+                    colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+                    actionBar.setBackgroundDrawable(colorDrawable);
                     AddpostFragment fragment4 = new AddpostFragment();
                     FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction4.replace(R.id.content, fragment4, "");

@@ -21,7 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -59,9 +58,9 @@ public class ChatboxFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 chatListList.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    ModelChatlist modelChatList = ds.getValue(ModelChatlist.class);
-                    if (!modelChatList.getId().equals(firebaseUser.getUid())) {
-                        chatListList.add(modelChatList);
+                    ModelChatlist modelChatlist = ds.getValue(ModelChatlist.class);
+                    if (!modelChatlist.getId().equals(firebaseUser.getUid())) {
+                        chatListList.add(modelChatlist);
                     }
 
                 }

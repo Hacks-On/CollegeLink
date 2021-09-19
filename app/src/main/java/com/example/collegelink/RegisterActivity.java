@@ -109,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 progressDialog.dismiss();
-                Toast.makeText(RegisterActivity.this, "Error Occured", Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, "ID already exists! Please Log in!", Toast.LENGTH_LONG).show();
             }
         });
     }
