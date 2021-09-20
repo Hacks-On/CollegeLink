@@ -1,11 +1,16 @@
 # CollegeLink
 
-This repository currently contains the source code for :
+#### This repository currently contains the source code for :
 
-- Splash screen
-- Login/register pages
-- Homepage
-- Addpost fragment
+- Splash screen(_incomplete_)
+- Login/register pages(_incomplete_)
+- Skills page(_complete_)
+- Homepage(_complete_)
+- Addpost fragment(_incomplete_)
+- Profile fragment(_complete_)
+- Profile skills page(_complete_)
+- Edit profile page(_complete_)
+- Home fragment(_incomplete_)
 
 Please note :
 
