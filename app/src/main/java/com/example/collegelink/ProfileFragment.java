@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -40,6 +41,7 @@ public class ProfileFragment extends Fragment {
     RecyclerView postrecycle;
     FloatingActionButton fab;
     ProgressDialog pd;
+    Button skills;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -62,6 +64,7 @@ public class ProfileFragment extends Fragment {
         nam = view.findViewById(R.id.nametv);
         email = view.findViewById(R.id.emailtv);
         fab = view.findViewById(R.id.fab);
+        skills=view.findViewById(R.id.profile_skill);
         pd = new ProgressDialog(getActivity());
         pd.setCanceledOnTouchOutside(false);
         Query query = databaseReference.orderByChild("email").equalTo(firebaseUser.getEmail());
@@ -91,6 +94,12 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        skills.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ProfileSkillPage.class));
+            }
+        });
         // On click we will open EditProfileActiity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

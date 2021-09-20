@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_color"
     tools:context=".EditProfilePage">
 
     <TextView
@@ -13,7 +15,8 @@
         android:layout_marginTop="50dp"
         android:text="Edit Profile Data"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#B0FFFFFF"
         android:textSize="26sp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -22,36 +25,51 @@
         android:layout_height="130dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/ic_users" />
+        android:src="@drawable/ic_users_light" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/profilepic"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginHorizontal="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Update Profile Pic"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:layout_marginTop="50dp"
+        android:layout_gravity="end"
+        android:background="@drawable/buttonborder"
+        android:backgroundTint="@color/buttonDefault"
+        android:text="UPDATE PROFILE PIC"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#B0000000"
+        android:textSize="17sp" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/editname"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginHorizontal="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Update Name"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:layout_marginTop="50dp"
+        android:layout_gravity="end"
+        android:background="@drawable/buttonborder"
+        android:backgroundTint="@color/buttonDefault"
+        android:text="UPDATE NAME"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#B0000000"
+        android:textSize="17sp" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/changepassword"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginHorizontal="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Change Password "
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:layout_marginTop="50dp"
+        android:layout_gravity="end"
+        android:background="@drawable/buttonborder"
+        android:backgroundTint="@color/buttonDefault"
+        android:text="CHANGE PASSWORD"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#B0000000"
+        android:textSize="17sp" />
 
 </LinearLayout>

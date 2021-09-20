@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_color"
     android:padding="26dp"
-    tools:context=".SkillPage">
+    tools:context=".ProfileSkillPage">
 
     <TextView
         android:id="@+id/text2"
@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <LinearLayout
         android:id="@+id/l1"
@@ -36,34 +36,34 @@
         app:layout_constraintVertical_bias="0.050000012">
 
         <CheckBox
-            android:id="@+id/C"
+            android:id="@+id/CP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="C/C++"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem" />
+            android:onClick="selectItemProfile" />
 
         <CheckBox
-            android:id="@+id/Java"
+            android:id="@+id/JavaP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Java"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem" />
+            android:onClick="selectItemProfile" />
 
         <CheckBox
-            android:id="@+id/Python"
+            android:id="@+id/PythonP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Python"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
     </LinearLayout>
 
     <LinearLayout
@@ -79,34 +79,34 @@
         app:layout_constraintVertical_bias="0">
 
         <CheckBox
-            android:id="@+id/PHP"
+            android:id="@+id/PHPP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="PHP"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/R"
+            android:id="@+id/RP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="R"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/Swift"
+            android:id="@+id/SwiftP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Swift"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
     </LinearLayout>
 
     <LinearLayout
@@ -122,34 +122,34 @@
         app:layout_constraintVertical_bias="0">
 
         <CheckBox
-            android:id="@+id/GoLang"
+            android:id="@+id/GoLangP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="GoLang"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/CHash"
+            android:id="@+id/CHashP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="C#"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/JavaScipt"
+            android:id="@+id/JavaSciptP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="JavaScript"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
     </LinearLayout>
 
     <LinearLayout
@@ -165,34 +165,34 @@
         app:layout_constraintVertical_bias="0">
 
         <CheckBox
-            android:id="@+id/Kotlin"
+            android:id="@+id/KotlinP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Kotlin"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/Pearl"
+            android:id="@+id/PearlP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Pearl"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/Ruby"
+            android:id="@+id/RubyP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Ruby"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
     </LinearLayout>
 
     <LinearLayout
@@ -208,34 +208,34 @@
         app:layout_constraintVertical_bias="0">
 
         <CheckBox
-            android:id="@+id/AI"
+            android:id="@+id/AIP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="AI"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/ML"
+            android:id="@+id/MLP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="ML"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/AndroidStudio"
+            android:id="@+id/AndroidStudioP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Android Studio"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
     </LinearLayout>
 
     <LinearLayout
@@ -251,34 +251,34 @@
         app:layout_constraintVertical_bias="0">
 
         <CheckBox
-            android:id="@+id/IOT"
+            android:id="@+id/IOTP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="IOT"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/WebDev"
+            android:id="@+id/WebDevP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="WebDev"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/ReactJS"
+            android:id="@+id/ReactJSP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:onClick="selectItem"
             android:text="ReactJS"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="selectItemProfile"/>
     </LinearLayout>
 
     <LinearLayout
@@ -294,34 +294,34 @@
         app:layout_constraintVertical_bias="0">
 
         <CheckBox
-            android:id="@+id/NodeJS"
+            android:id="@+id/NodeJSP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="NodeJS"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/Flutter"
+            android:id="@+id/FlutterP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Flutter"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/Firebase"
+            android:id="@+id/FirebaseP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Firebase"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
     </LinearLayout>
 
     <LinearLayout
@@ -337,53 +337,54 @@
         app:layout_constraintVertical_bias="0">
 
         <CheckBox
-            android:id="@+id/DBMS"
+            android:id="@+id/DBMSP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="DBMS"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/DataScience"
+            android:id="@+id/DataScienceP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="Data Science"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/UIUX"
+            android:id="@+id/UIUXP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
             android:text="UI/UX"
+            android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="selectItem"/>
+            android:onClick="selectItemProfile"/>
     </LinearLayout>
 
     <Button
-        android:id="@+id/Update"
+        android:id="@+id/UpdateP"
         android:layout_width="97dp"
         android:layout_height="45dp"
-        android:background="@drawable/roundedbutton"
+        android:background = "@drawable/roundedbutton"
         android:fontFamily="@font/ubuntu_light"
-        android:text="Add"
+        android:text="Update"
+        app:backgroundTint="#FFFFFF"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/l8"
         app:layout_constraintVertical_bias="0.392" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

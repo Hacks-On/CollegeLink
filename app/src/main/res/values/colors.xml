@@ -21,4 +21,5 @@
     <color name="btnedit">#2CA7E0</color>
     <color name="neutral">#0a1b97</color>
     <color name="colordrawer">#2B2C2E</color>
+    <color name="buttonDefault" >#E2BDE8</color>
 </resources>

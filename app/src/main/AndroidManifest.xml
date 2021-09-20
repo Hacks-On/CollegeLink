@@ -14,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeLink">
+        <activity android:name=".ProfileSkillPage"></activity>
         <activity android:name=".PostDetailsActivity" />
         <activity android:name=".PostLikedByActivity" />
         <activity android:name=".EditProfilePage" />

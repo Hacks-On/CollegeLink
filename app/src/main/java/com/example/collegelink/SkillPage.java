@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -68,7 +69,7 @@ public class SkillPage extends AppCompatActivity {
 
                 DatabaseReference databaseReference = fData.getReference("Users");
                 databaseReference.child(userid).child("Skills").setValue(selection);
-
+                Toast.makeText(SkillPage.this, "Added skills!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
             }

@@ -56,7 +56,7 @@ public class EditProfilePage extends AppCompatActivity {
     String storagepath = "Users_Profile_Cover_image/";
     String uid;
     ImageView set;
-    TextView profilepic, editname, editpassword, editskills;
+    Button profilepic, editname, editpassword, editskills;
     ProgressDialog pd;
     private static final int CAMERA_REQUEST = 100;
     private static final int STORAGE_REQUEST = 200;
@@ -86,25 +86,25 @@ public class EditProfilePage extends AppCompatActivity {
         cameraPermission = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
         Query query = databaseReference.orderByChild("email").equalTo(firebaseUser.getEmail());
-                query.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
 
-                            String image = "" + dataSnapshot1.child("image").getValue();
+                    String image = "" + dataSnapshot1.child("image").getValue();
 
-                            try {
-                                Glide.with(EditProfilePage.this).load(image).into(set);
-                            } catch (Exception e) {
-                            }
-                        }
+                    try {
+                        Glide.with(EditProfilePage.this).load(image).into(set);
+                    } catch (Exception e) {
                     }
+                }
+            }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    }
-                });
+            }
+        });
 
         editpassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -200,7 +200,7 @@ public class EditProfilePage extends AppCompatActivity {
             }
         });
 
-}
+    }
 
     // checking storage permission ,if given then we can add something in our storage
     private Boolean checkStoragePermission() {
