@@ -4,15 +4,46 @@
 
     <item
         android:id="@+id/logout"
-        android:title="Logout">
-    </item>
+        android:title="Logout"
+        >
 
+    </item>
+    <item
+        android:id="@+id/settings"
+        android:title="Setting"
+        >
+
+    </item>
     <item
         android:id="@+id/search"
-        android:icon="@drawable/ic_search"
+        app:showAsAction="always"
         android:title="Search"
-        app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="always">
-    </item>
+        android:icon="@drawable/ic_search"
+        app:actionViewClass="android.widget.SearchView" >
 
+    </item>
+    <item
+        android:id="@+id/add"
+        android:title="Add"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add"
+        ></item>
+    <item
+        android:id="@+id/craetegrp"
+        android:title="Group"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_group"
+        ></item>
+    <item
+        android:id="@+id/addparticipants"
+        android:title="Add Participants"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_addparticipants"
+        ></item>
+    <item
+        android:id="@+id/grpinfo"
+        android:title="Group Info"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_info"
+        ></item>
 </menu>

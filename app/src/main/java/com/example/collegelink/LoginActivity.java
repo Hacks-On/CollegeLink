@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         // Recover Your Password using email
-        reocverpass.setOnClickListener(new View.OnClickListener() {
+       reocverpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showRecoverPasswordDialog();

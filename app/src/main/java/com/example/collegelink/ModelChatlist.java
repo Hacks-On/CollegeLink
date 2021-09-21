@@ -1,6 +1,6 @@
 package com.example.collegelink;
 
-class ModelChatlist {
+public class ModelChatlist {
 
     public String getId() {
         return id;

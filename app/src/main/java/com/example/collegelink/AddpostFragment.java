@@ -41,6 +41,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
@@ -70,6 +71,9 @@ public class AddpostFragment extends Fragment {
     DatabaseReference databaseReference;
     Button upload;
 
+    ArrayList<String> selection = new ArrayList<String>();
+    ArrayList<Object> pid = new ArrayList<Object>();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -93,7 +97,7 @@ public class AddpostFragment extends Fragment {
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     name = dataSnapshot1.child("name").getValue().toString();
                     email = "" + dataSnapshot1.child("email").getValue();
-                    dp = "" + dataSnapshot1.child("image").getValue().toString();
+                    //dp = "" + dataSnapshot1.child("image").getValue().toString();
                 }
             }
 

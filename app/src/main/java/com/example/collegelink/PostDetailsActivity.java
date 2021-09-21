@@ -110,6 +110,14 @@ public class PostDetailsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PostDetailsActivity.this, ChatActivity.class);
+                intent.putExtra("uid", "430G0IbYtNSvyWsC2lF2WO35IJu2");
+                startActivity(intent);
+            }
+        });
     }
 
     private void loadComments() {

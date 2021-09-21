@@ -1,9 +1,104 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="64dp"
-    android:height="64dp"
-    android:viewportWidth="64"
-    android:viewportHeight="64">
-  <path
-      android:pathData="M59.8899,39.5799C58.9989,38.1825 57.828,36.9847 56.4511,36.0622C55.0743,35.1397 53.5212,34.5124 51.8899,34.2199L49.3699,33.7799C46.7612,33.3284 44.0775,33.6448 41.6453,34.6905C39.213,35.7362 37.1371,37.4661 35.6699,39.6699C35.6121,39.752 35.5378,39.8211 35.4516,39.8728C35.3655,39.9244 35.2696,39.9575 35.1699,39.9699C35.0708,39.979 34.9709,39.9677 34.8763,39.9367C34.7817,39.9058 34.6945,39.8558 34.6199,39.7899L24.4599,30.3299C24.2954,30.1772 24.1683,29.9885 24.0885,29.7787C24.0087,29.5688 23.9784,29.3434 23.9999,29.1199C24.015,28.8923 24.0846,28.6717 24.203,28.4768C24.3214,28.2818 24.485,28.1183 24.6799,27.9999C26.2676,27.0074 27.5063,25.5443 28.2232,23.8146C28.9402,22.0849 29.0999,20.1746 28.6799,18.3499L27.9999,15.5599C27.5165,13.5032 26.5413,11.5945 25.158,9.9976C23.7748,8.4006 22.0247,7.1631 20.0581,6.3912C18.0914,5.6193 15.9668,5.336 13.8666,5.5657C11.7664,5.7954 9.7533,6.5311 7.9999,7.7099L7.8699,7.7999C5.4093,9.4494 3.6322,11.9373 2.8699,14.7999C0.2099,24.6899 7.0599,38.3999 19.4499,48.1099C27.9999,54.8399 37.8899,58.5399 46.1299,58.5399C49.4087,58.6142 52.657,57.8973 55.5999,56.4499C57.0059,55.6854 58.2399,54.6404 59.2256,53.3795C60.2112,52.1187 60.9274,50.6688 61.3299,49.1199C61.7631,47.5167 61.8588,45.8409 61.6109,44.1988C61.363,42.5567 60.777,40.9839 59.8899,39.5799V39.5799Z"
-      android:fillColor="#000000"/>
-</vector>
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <!--Shadow Layers-->
+
+  <item>
+    <rotate
+        android:fromDegrees="-35"
+        android:pivotX="0%"
+        android:pivotY="0%"
+        android:toDegrees="0">
+      <shape android:shape="rectangle">
+        <corners android:radius="4dp" />
+        <padding
+            android:bottom="1px"
+            android:left="1px"
+            android:right="1px" />
+        <solid android:color="#01000000" />
+      </shape>
+    </rotate>
+  </item>
+  <item android:left="8dp">
+    <shape android:shape="rectangle">
+      <padding
+          android:bottom="1px"
+          android:left="1px"
+          android:right="1px" />
+      <solid android:color="#01000000" />
+      <corners android:radius="8dp" />
+    </shape>
+  </item>
+
+  <!--===============-->
+  <item>
+    <rotate
+        android:fromDegrees="-35"
+        android:pivotX="0%"
+        android:pivotY="0%"
+        android:toDegrees="0">
+      <shape android:shape="rectangle">
+        <corners android:radius="4dp" />
+        <padding android:bottom="1px" />
+        <solid android:color="#09000000" />
+      </shape>
+    </rotate>
+  </item>
+  <item android:left="8dp">
+    <shape android:shape="rectangle">
+      <padding android:bottom="1px" />
+      <solid android:color="#09000000" />
+      <corners android:radius="8dp" />
+    </shape>
+  </item>
+
+  <!--===============-->
+
+  <item>
+    <rotate
+        android:fromDegrees="-35"
+        android:pivotX="0%"
+        android:pivotY="0%"
+        android:toDegrees="0">
+      <shape android:shape="rectangle">
+        <corners android:radius="4dp" />
+        <padding
+            android:bottom="1px"
+            android:left="1px"
+            android:right="1px" />
+        <solid android:color="#10000000" />
+      </shape>
+    </rotate>
+  </item>
+  <item android:left="8dp">
+    <shape android:shape="rectangle">
+      <padding
+          android:bottom="1px"
+          android:left="1px"
+          android:right="1px" />
+      <solid android:color="#10000000" />
+      <corners android:radius="8dp" />
+    </shape>
+  </item>
+
+  <!--ForeGround-->
+
+  <item>
+    <rotate
+        android:fromDegrees="-35"
+        android:pivotX="0%"
+        android:pivotY="0%"
+        android:toDegrees="0">
+      <shape android:shape="rectangle">
+        <corners android:radius="4dp" />
+        <solid android:color="@color/colorWhite" />
+      </shape>
+    </rotate>
+  </item>
+  <item android:left="8dp">
+    <shape android:shape="rectangle">
+      <solid android:color="@color/colorWhite" />
+      <corners android:radius="8dp" />
+    </shape>
+  </item>
+</layer-list>

@@ -39,7 +39,7 @@ public class SkillPage extends AppCompatActivity {
         mSwift = findViewById(R.id.Swift);
         mGoLang = findViewById(R.id.GoLang);
         mCHash = findViewById(R.id.CHash);
-        mJavaScript = findViewById(R.id.JavaScipt);
+        mJavaScript = findViewById(R.id.JavaScript);
         mKotlin = findViewById(R.id.Kotlin);
         mPearl = findViewById(R.id.Pearl);
         mRuby = findViewById(R.id.Ruby);
@@ -58,6 +58,7 @@ public class SkillPage extends AppCompatActivity {
 
         mUpdate = findViewById(R.id.Update);
 
+
         fAuth = FirebaseAuth.getInstance();
         fData = FirebaseDatabase.getInstance();
         userid = fAuth.getCurrentUser().getUid();
@@ -68,157 +69,164 @@ public class SkillPage extends AppCompatActivity {
             public void onClick(View view) {
 
                 DatabaseReference databaseReference = fData.getReference("Users");
-                databaseReference.child(userid).child("Skills").setValue(selection);
+                /*databaseReference.child(userid).child("Skills").setValue(selection);
+
+                DatabaseReference ref = fData.getReference("Skills");
+                for(int i=0;i<selection.size();i++){
+                    ref.child(selection.get(i)).child(userid).setValue(userid);
+                }*/
+
                 Toast.makeText(SkillPage.this, "Added skills!", Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
             }
         });
-
     }
     public void selectItem(View view) {
+
         boolean checked = ((CheckBox) view).isChecked();
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.C:
-                if(checked)
-                    selection.add("C/C++");
+                if (checked)
+                    selection.add("C++");
                 else
-                    selection.remove("C/C++");
+                    selection.remove("C++");
                 break;
             case R.id.Java:
-                if(checked)
+                if (checked)
                     selection.add("Java");
                 else
                     selection.remove("Java");
                 break;
             case R.id.Python:
-                if(checked)
+                if (checked)
                     selection.add("Python");
                 else
                     selection.remove("Python");
                 break;
             case R.id.PHP:
-                if(checked)
+                if (checked)
                     selection.add("PHP");
                 else
                     selection.remove("PHP");
                 break;
             case R.id.R:
-                if(checked)
+                if (checked)
                     selection.add("R");
                 else
                     selection.remove("R");
                 break;
             case R.id.Swift:
-                if(checked)
+                if (checked)
                     selection.add("Swift");
                 else
                     selection.remove("Swift");
                 break;
             case R.id.GoLang:
-                if(checked)
+                if (checked)
                     selection.add("GoLang");
                 else
                     selection.remove("GoLang");
                 break;
             case R.id.CHash:
-                if(checked)
+                if (checked)
                     selection.add("C#");
                 else
                     selection.remove("C#");
                 break;
-            case R.id.JavaScipt:
-                if(checked)
+            case R.id.JavaScript:
+                if (checked)
                     selection.add("JavaScript");
                 else
                     selection.remove("JavaScript");
                 break;
             case R.id.Kotlin:
-                if(checked)
+                if (checked)
                     selection.add("Kotlin");
                 else
                     selection.remove("Kotlin");
                 break;
             case R.id.Pearl:
-                if(checked)
+                if (checked)
                     selection.add("Pearl");
                 else
                     selection.remove("Pearl");
                 break;
             case R.id.Ruby:
-                if(checked)
+                if (checked)
                     selection.add("Ruby");
                 else
                     selection.remove("Ruby");
                 break;
             case R.id.AI:
-                if(checked)
+                if (checked)
                     selection.add("AI");
                 else
                     selection.remove("AI");
                 break;
             case R.id.ML:
-                if(checked)
+                if (checked)
                     selection.add("ML");
                 else
                     selection.remove("ML");
                 break;
             case R.id.AndroidStudio:
-                if(checked)
+                if (checked)
                     selection.add("Android Studio");
                 else
                     selection.remove("Android Studio");
                 break;
             case R.id.IOT:
-                if(checked)
+                if (checked)
                     selection.add("IOT");
                 else
                     selection.remove("IOT");
                 break;
             case R.id.WebDev:
-                if(checked)
+                if (checked)
                     selection.add("WebDev");
                 else
                     selection.remove("WebDev");
                 break;
             case R.id.ReactJS:
-                if(checked)
+                if (checked)
                     selection.add("ReactJS");
                 else
                     selection.remove("ReactJS");
                 break;
             case R.id.NodeJS:
-                if(checked)
+                if (checked)
                     selection.add("NodeJS");
                 else
                     selection.remove("NodeJS");
                 break;
             case R.id.Flutter:
-                if(checked)
+                if (checked)
                     selection.add("Flutter");
                 else
                     selection.remove("Flutter");
                 break;
             case R.id.Firebase:
-                if(checked)
+                if (checked)
                     selection.add("Firebase");
                 else
                     selection.remove("Firebase");
                 break;
             case R.id.DBMS:
-                if(checked)
+                if (checked)
                     selection.add("DBMS");
                 else
                     selection.remove("DBMS");
                 break;
             case R.id.DataScience:
-                if(checked)
+                if (checked)
                     selection.add("Data Science");
                 else
                     selection.remove("Data Science");
                 break;
             case R.id.UIUX:
-                if(checked)
+                if (checked)
                     selection.add("UI/UX");
                 else
                     selection.remove("UI/UX");

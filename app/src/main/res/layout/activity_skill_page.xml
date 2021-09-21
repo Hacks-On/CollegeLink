@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
-            android:text="C/C++"
+            android:text="C++"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:onClick="selectItem" />
@@ -142,7 +142,7 @@
             android:onClick="selectItem"/>
 
         <CheckBox
-            android:id="@+id/JavaScipt"
+            android:id="@+id/JavaScript"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"

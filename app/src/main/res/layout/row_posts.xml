@@ -116,30 +116,49 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/like"
+                android:backgroundTint="#D91C5C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autoLink="all"
+                android:fontFamily="@font/montserrat"
                 android:background="@color/colorWhite"
                 android:drawableStart="@drawable/ic_like"
                 android:drawableLeft="@drawable/ic_like"
                 android:padding="5dp"
-                android:text="Like" />
+                android:textColor="@color/white"
+                android:text="Like"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autoLink="all"
-
+                android:fontFamily="@font/montserrat"
+                android:backgroundTint="#D91C5C"
+                android:textColor="@color/white"
                 android:background="@color/colorWhite"
                 android:drawableStart="@drawable/ic_comment"
                 android:drawableLeft="@drawable/ic_comment"
                 android:padding="5dp"
                 android:text="Comment" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat"
+                android:backgroundTint="#D91C5C"
+                android:padding="7dp"
+                android:background="@color/colorWhite"
+                android:drawableStart="@drawable/ic_share"
+                android:drawableLeft="@drawable/ic_share"
+                android:text="Chat" />
+
         </LinearLayout>
 
     </LinearLayout>

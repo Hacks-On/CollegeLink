@@ -133,8 +133,9 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/like"
+                            android:backgroundTint="#D91C5C"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -142,19 +143,27 @@
                             android:background="@color/colorWhite"
                             android:drawableStart="@drawable/ic_like"
                             android:drawableLeft="@drawable/ic_like"
+                            android:fontFamily="@font/montserrat"
                             android:padding="5dp"
-                            android:text="Like" />
+                            android:textColor="@color/white"
+                            android:text="Like"/>
 
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/share"
+                            android:backgroundTint="#D91C5C"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:autoLink="all"
                             android:background="@color/colorWhite"
                             android:drawableStart="@drawable/ic_share"
                             android:drawableLeft="@drawable/ic_share"
+                            android:fontFamily="@font/montserrat"
                             android:padding="5dp"
-                            android:text="SHARE" />
+                            android:textColor="@color/white"
+                            android:text="Chat"/>
+
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -168,7 +177,7 @@
                 android:drawableLeft="@drawable/ic_comment"
                 android:drawablePadding="5dp"
                 android:padding="2dp"
-                android:text="Comments"
+                android:fontFamily="@font/montserrat"
                 android:textColor="@color/colorBlack" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -209,7 +218,7 @@
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:background="@color/colorWhite"
-            android:src="@drawable/bg_sender" />
+            android:src="@drawable/bg_send" />
 
     </RelativeLayout>
 

@@ -39,7 +39,7 @@
             android:id="@+id/CP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C/C++"
+            android:text="C++"
             android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
