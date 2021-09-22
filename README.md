@@ -11,6 +11,8 @@
 - Profile skills page(_complete_)
 - Edit profile page(_complete_)
 - Notifications fragment(_incomplete_)
+- Users fragment(_complete_)
+- Users' profile page(_incomplete_)
 - Chatbox fragment(_incomplete_)
 - Home fragment(_incomplete_)
 
