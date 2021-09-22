@@ -132,10 +132,10 @@
             android:onClick="selectItemProfile"/>
 
         <CheckBox
-            android:id="@+id/CHashP"
+            android:id="@+id/UnityP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C#"
+            android:text="Unity"
             android:buttonTint="#FFFFFF"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -145,11 +145,11 @@
             android:id="@+id/JavaSciptP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="JavaScript"
             android:buttonTint="#FFFFFF"
+            android:onClick="selectItemProfile"
+            android:text="JavaScript"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:onClick="selectItemProfile"/>
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout

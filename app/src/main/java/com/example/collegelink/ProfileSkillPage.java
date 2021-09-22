@@ -54,7 +54,7 @@ public class ProfileSkillPage extends AppCompatActivity {
         mRP = findViewById(R.id.RP);
         mSwiftP = findViewById(R.id.SwiftP);
         mGoLangP = findViewById(R.id.GoLangP);
-        mCHashP = findViewById(R.id.CHashP);
+        mCHashP = findViewById(R.id.UnityP);
         mJavaScriptP = findViewById(R.id.JavaSciptP);
         mKotlinP = findViewById(R.id.KotlinP);
         mPearlP = findViewById(R.id.PearlP);
@@ -233,7 +233,7 @@ public class ProfileSkillPage extends AppCompatActivity {
                     //ref2.child("GoLang").child(userid).removeValue();
                 }
                 break;
-            case R.id.CHashP:
+            case R.id.UnityP:
                 if(checked) {
                     selection.add("C#");
                     //ref2.child("C#").child(userid).setValue(userid);

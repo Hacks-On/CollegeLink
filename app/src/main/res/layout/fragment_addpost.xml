@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,17 +15,32 @@
         android:orientation="vertical"
         android:padding="15dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:text="NEW POST"
+            android:fontFamily="@font/montserrat"
+            android:includeFontPadding="false"
+            android:textSize="30dp"
+            android:textColor="#B0FFFFFF"/>
+
+
         <EditText
             android:id="@+id/ptitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
             android:background="@drawable/edit"
-            android:hint="Enter Title"
-            android:textColorHint="@color/black"
             android:fontFamily="@font/opensansitalic"
+            android:hint="Enter Title"
+            android:textColor="@color/colorBlack"
             android:minHeight="80dp"
+            android:singleLine="true"
             android:padding="10dp"
-            android:singleLine="true" />
+            android:textColorHint="@color/black" />
 
         <ImageView
             android:id="@+id/imagep"
@@ -42,6 +58,7 @@
             android:background="@drawable/edit"
             android:gravity="start"
             android:hint="Enter Description"
+            android:textColor="@color/colorBlack"
             android:fontFamily="@font/opensansitalic"
             android:textColorHint="@color/black"
             android:inputType="textCapSentences|textMultiLine"
@@ -49,21 +66,259 @@
             android:padding="10dp"
             android:singleLine="true" />
 
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:id="@+id/Cpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C++"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/Javapost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/Pythonpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Python"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/Rpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/PHPpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <CheckBox
+                android:id="@+id/AndroidStudiopost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android Studio"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <CheckBox
+                android:id="@+id/Swiftpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Swift"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <CheckBox
+                android:id="@+id/JavaScriptpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JavaScript"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <CheckBox
+                android:id="@+id/DBMSpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DBMS"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/GoLangpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GoLang"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/CHashpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C#"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/Firebasepost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Firebase"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <CheckBox
+                android:id="@+id/DataSciencepost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Science"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/Kotlinpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kotlin"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/Pearlpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pearl"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/UIUXpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UI/UX"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <CheckBox
+                android:id="@+id/MLpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ML"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/IOTpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IOT"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/WebDevpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WebDev"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/ReactJSpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ReactJS"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <CheckBox
+                android:id="@+id/AIpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/NodeJSpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NodeJS"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/Flutterpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flutter"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/Rubypost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruby"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/pupload"
+            android:id="@+id/requirements"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/buttonborder"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="@color/buttonDefault"
             android:text="UPLOAD"
             android:fontFamily="@font/montserrat"
-            android:textAlignment="center"
-            android:textColor="#510237"
-            android:textSize="17dp"
-            tools:ignore="RtlCompat" />
+            android:textColor="#B0000000"
+            android:textSize="17sp" />
+
     </LinearLayout>
+
+
 
 </ScrollView>

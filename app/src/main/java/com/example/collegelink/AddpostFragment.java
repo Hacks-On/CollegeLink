@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -48,6 +49,7 @@ import java.util.HashMap;
 /**
  * A simple {@link Fragment} subclass.
  */
+
 public class AddpostFragment extends Fragment {
 
     public AddpostFragment() {
@@ -62,17 +64,18 @@ public class AddpostFragment extends Fragment {
     String storagePermission[];
     ProgressDialog pd;
     ImageView image;
+    CheckBox mC, mJava,mPython, mPHP, mR, mSwift, mGoLang, mCHash, mJavaScript,
+            mKotlin, mPearl, mRuby, mAI, mML, mAndroidStudio,mIOT, mWebDev, mReactJS,
+            mNodeJS, mFlutter, mFirebase, mDBMS, mDataScience, mUIUX;
+    ArrayList<String> selection = new ArrayList<String>();
     String edititle, editdes, editimage;
     private static final int IMAGEPICK_GALLERY_REQUEST = 300;
     private static final int IMAGE_PICKCAMERA_REQUEST = 400;
 
     Uri imageuri = null;
-    String name, email, uid, dp;
+    String name, email, uid, dp, timestamp;
     DatabaseReference databaseReference;
-    Button upload;
-
-    ArrayList<String> selection = new ArrayList<String>();
-    ArrayList<Object> pid = new ArrayList<Object>();
+    Button req;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -80,13 +83,297 @@ public class AddpostFragment extends Fragment {
         firebaseAuth = FirebaseAuth.getInstance();
         View view = inflater.inflate(R.layout.fragment_addpost, container, false);
 
+
+
         title = view.findViewById(R.id.ptitle);
         des = view.findViewById(R.id.pdes);
         image = view.findViewById(R.id.imagep);
-        upload = view.findViewById(R.id.pupload);
+        req = view.findViewById(R.id.requirements);
         pd = new ProgressDialog(getContext());
         pd.setCanceledOnTouchOutside(false);
+        mC = (CheckBox) view.findViewById(R.id.Cpost);
+        mJava = (CheckBox) view.findViewById(R.id.Javapost);
+        mPython = (CheckBox) view.findViewById(R.id.Pythonpost);
+        mPHP = (CheckBox) view.findViewById(R.id.PHPpost);
+        mR = (CheckBox) view.findViewById(R.id.Rpost);
+        mSwift = (CheckBox) view.findViewById(R.id.Swiftpost);
+        mGoLang = (CheckBox) view.findViewById(R.id.GoLangpost);
+        mCHash = (CheckBox) view.findViewById(R.id.CHashpost);
+        mJavaScript = (CheckBox) view.findViewById(R.id.JavaScriptpost);
+        mKotlin = (CheckBox) view.findViewById(R.id.Kotlinpost);
+        mPearl = (CheckBox) view.findViewById(R.id.Pearlpost);
+        mRuby = (CheckBox) view.findViewById(R.id.Rubypost);
+        mAI = (CheckBox) view.findViewById(R.id.AIpost);
+        mML = (CheckBox) view.findViewById(R.id.MLpost);
+        mAndroidStudio = (CheckBox) view.findViewById(R.id.AndroidStudiopost);
+        mIOT = (CheckBox) view.findViewById(R.id.IOTpost);
+        mWebDev = (CheckBox) view.findViewById(R.id.WebDevpost);
+        mReactJS = (CheckBox) view.findViewById(R.id.ReactJSpost);
+        mNodeJS = (CheckBox) view.findViewById(R.id.NodeJSpost);
+        mFlutter = (CheckBox) view.findViewById(R.id.Flutterpost);
+        mFirebase = (CheckBox) view.findViewById(R.id.Firebasepost);
+        mDBMS = (CheckBox) view.findViewById(R.id.DBMSpost);
+        mDataScience = (CheckBox) view.findViewById(R.id.DataSciencepost);
+        mUIUX = (CheckBox) view.findViewById(R.id.UIUXpost);
         Intent intent = getActivity().getIntent();
+
+        mC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("C++");
+                else
+                    selection.remove("C++");
+            }
+        });
+        mJava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Java");
+                else
+                    selection.remove("Java");
+            }
+        });
+        mPython.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Python");
+                else
+                    selection.remove("Python");
+            }
+        });
+        mPHP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("PHP");
+                else
+                    selection.remove("PHP");
+            }
+        });
+        mR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("R");
+                else
+                    selection.remove("R");
+            }
+        });
+        mSwift.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Swift");
+                else
+                    selection.remove("Swift");
+            }
+        });
+        mGoLang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("GoLang");
+                else
+                    selection.remove("GoLang");
+            }
+        });
+        mCHash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("C#");
+                else
+                    selection.remove("C#");
+            }
+        });
+        mJavaScript.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("JavaScript");
+                else
+                    selection.remove("JavaScript");
+            }
+        });
+        mKotlin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Kotlin");
+                else
+                    selection.remove("Kotlin");
+            }
+        });
+        mPearl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Pearl");
+                else
+                    selection.remove("Pearl");
+            }
+        });
+
+        mRuby.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Ruby");
+                else
+                    selection.remove("Ruby");
+            }
+        });
+
+        mAI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("AI");
+                else
+                    selection.remove("AI");
+            }
+        });
+
+        mIOT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("IOT");
+                else
+                    selection.remove("IOT");
+            }
+        });
+
+        mAndroidStudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Android Studio");
+                else
+                    selection.remove("Android Studio");
+            }
+        });
+
+
+        mML.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("ML");
+                else
+                    selection.remove("ML");
+            }
+        });
+
+        mWebDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("WebDev");
+                else
+                    selection.remove("WebDev");
+            }
+        });
+
+        mReactJS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("ReactJS");
+                else
+                    selection.remove("ReactJS");
+            }
+        });
+
+        mNodeJS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("NodeJS");
+                else
+                    selection.remove("NodeJS");
+            }
+        });
+
+        mFlutter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Flutter");
+                else
+                    selection.remove("Flutter");
+            }
+        });
+
+        mFirebase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Firebase");
+                else
+                    selection.remove("Firebase");
+            }
+        });
+
+        mDBMS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("DBMS");
+                else
+                    selection.remove("DBMS");
+            }
+        });
+
+        mDataScience.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("Data Science");
+                else
+                    selection.remove("Data Science");
+            }
+        });
+
+        mUIUX.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked)
+                    selection.add("UI/UX");
+                else
+                    selection.remove("UI/UX");
+            }
+        });
+
+
+
 
         // Retrieving the user data like name ,email and profile pic using query
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
@@ -97,7 +384,7 @@ public class AddpostFragment extends Fragment {
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     name = dataSnapshot1.child("name").getValue().toString();
                     email = "" + dataSnapshot1.child("email").getValue();
-                    //dp = "" + dataSnapshot1.child("image").getValue().toString();
+                    dp = "" + dataSnapshot1.child("image").getValue().toString();
                 }
             }
 
@@ -119,8 +406,10 @@ public class AddpostFragment extends Fragment {
             }
         });
 
+
+
         // Now we will upload out blog
-        upload.setOnClickListener(new View.OnClickListener() {
+        req.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String titl = "" + title.getText().toString().trim();
@@ -147,10 +436,13 @@ public class AddpostFragment extends Fragment {
                 } else {
                     uploadData(titl, description);
                 }
+
             }
         });
         return view;
     }
+
+
 
     private void showImagePicDialog() {
         String options[] = {"Camera", "Gallery"};
@@ -258,7 +550,7 @@ public class AddpostFragment extends Fragment {
     }
 
     // Upload the value of blog data into firebase
-    private void uploadData(final String titl, final String description) {
+    public void uploadData(final String titl, final String description) {
         // show the progress dialog box
         pd.setMessage("Publishing Post");
         pd.show();
@@ -292,6 +584,7 @@ public class AddpostFragment extends Fragment {
                     hashMap.put("plike", "0");
                     hashMap.put("pcomments", "0");
 
+
                     // set the data into firebase and then empty the title ,description and image data
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Posts");
                     databaseReference.child(timestamp).setValue(hashMap)
@@ -314,6 +607,10 @@ public class AddpostFragment extends Fragment {
                             Toast.makeText(getContext(), "Failed", Toast.LENGTH_LONG).show();
                         }
                     });
+
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Posts");
+                    ref.child(timestamp).child("Skills").setValue(selection);
+
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -324,6 +621,7 @@ public class AddpostFragment extends Fragment {
             }
         });
     }
+
 
     // Here we are getting data from image
     @Override

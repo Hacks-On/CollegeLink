@@ -47,7 +47,7 @@ public class SkillPage extends AppCompatActivity {
         mR = findViewById(R.id.R);
         mSwift = findViewById(R.id.Swift);
         mGoLang = findViewById(R.id.GoLang);
-        mCHash = findViewById(R.id.CHash);
+        mCHash = findViewById(R.id.Unity);
         mJavaScript = findViewById(R.id.JavaScript);
         mKotlin = findViewById(R.id.Kotlin);
         mPearl = findViewById(R.id.Pearl);
@@ -138,7 +138,7 @@ public class SkillPage extends AppCompatActivity {
                 else
                     selection.remove("GoLang");
                 break;
-            case R.id.CHash:
+            case R.id.Unity:
                 if (checked)
                     selection.add("C#");
                 else

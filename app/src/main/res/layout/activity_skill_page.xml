@@ -132,11 +132,11 @@
             android:onClick="selectItem"/>
 
         <CheckBox
-            android:id="@+id/CHash"
+            android:id="@+id/Unity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
-            android:text="C#"
+            android:text="Unity"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:onClick="selectItem"/>
