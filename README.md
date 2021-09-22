@@ -27,7 +27,8 @@
 
 ### Java files created :
 
-- `ModelChat.java` : Contains various functions used to fetch keys/data related to the chat fragment wherever required.
+- `ModelChat.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow chat functionality.
+- `AdapterChat.java` : Contains various functions to transfer data between chat classes and display it using whichever view required.
 
 ### Please note :
 
