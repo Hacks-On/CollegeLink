@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -49,18 +51,19 @@ public class TheirProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_their_profile);
         actionBar=getSupportActionBar();
-        actionBar.setTitle("Profile Activity");
-
+        actionBar.setTitle("User's profile");
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
         postrecycle=findViewById(R.id.recyclerposts);
         avatartv=findViewById(R.id.avatartv);
-        covertv=findViewById(R.id.cavertv);
+        //covertv=findViewById(R.id.cavertv);
         nam=findViewById(R.id.nametv);
         email=findViewById(R.id.emailtv);
         pd=new ProgressDialog(this);
         pd.setCanceledOnTouchOutside(false);
-        phone=findViewById(R.id.phonetv);
+        //phone=findViewById(R.id.phonetv);
         firebaseAuth=FirebaseAuth.getInstance();
         uid=getIntent().getStringExtra("uid");
         posts=new ArrayList<>();
@@ -76,7 +79,7 @@ public class TheirProfileActivity extends AppCompatActivity {
                     String cover=""+dataSnapshot1.child("cover").getValue();
                     nam.setText(name);
                     email.setText(emaill);
-                    phone.setText(phonee);
+                    //phone.setText(phonee);
                     try {
                         Picasso.with(TheirProfileActivity.this).load(image).into(avatartv);
                     }catch (Exception e){
@@ -177,9 +180,12 @@ public class TheirProfileActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu,menu);
-        menu.findItem(R.id.add).setVisible(false);
-        //menu.findItem(R.id.craetegrp).setVisible(false);
         MenuItem item=menu.findItem(R.id.search);
+        menu.findItem(R.id.logout).setVisible(false);
+        menu.findItem(R.id.craetegrp).setVisible(false);
+        menu.findItem(R.id.add).setVisible(false);
+        menu.findItem(R.id.addparticipants).setVisible(false);
+        menu.findItem(R.id.grpinfo).setVisible(false);
         SearchView searchView=(SearchView) MenuItemCompat.getActionView(item);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

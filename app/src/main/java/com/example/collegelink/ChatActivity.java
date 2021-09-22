@@ -241,7 +241,7 @@ public class ChatActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(ChatActivity.this,"Blocked Users",Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChatActivity.this,"Blocked User",Toast.LENGTH_LONG).show();
                         block.setImageResource(R.drawable.ic_block);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -265,7 +265,7 @@ public class ChatActivity extends AppCompatActivity {
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
-                                                Toast.makeText(ChatActivity.this,"UnBlocked Users",Toast.LENGTH_LONG).show();
+                                                Toast.makeText(ChatActivity.this,"Unblocked User",Toast.LENGTH_LONG).show();
                                                 block.setImageResource(R.drawable.ic_unblock);
                                             }
                                         }).addOnFailureListener(new OnFailureListener() {
