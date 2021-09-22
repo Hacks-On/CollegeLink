@@ -33,8 +33,16 @@
 
 ### Java files created :
 
-- `ModelChat.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow chat functionality.
+- `ModelChat.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow chat functionality between two users.
 - `AdapterChat.java` : Contains various functions to transfer data between chat classes and display it using whichever view required.
+- `ChatActivity.java` : Responsible for showing the chat screen between two users and performing various functions around it.
+- `ModelChatlist.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow displaying all the chats of the current user.
+- `AdapterChatList.java` : Contains various functions to transfer data between chatlist classes and display it using whichever view required.
+- `ChatboxFragment.java` : Responsible for displaying all the chats of the current user as received from the chatlist classes.
+
+- `ModelUsers.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow displaying a list of registered users.
+- `AdapterUsers.java` : Contains various functions to transfer data between user classes and display it using whichever view required.
+- `UsersFragment.java` : Responsible for displaying all the registered users as received from other user classes.
 
 ### Please note :
 
