@@ -29,9 +29,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class HomeFragment extends Fragment {
 
     FirebaseAuth firebaseAuth;
@@ -117,6 +114,10 @@ public class HomeFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.main_menu, menu);
         MenuItem item = menu.findItem(R.id.search);
+        menu.findItem(R.id.craetegrp).setVisible(false);
+        menu.findItem(R.id.addparticipants).setVisible(false);
+        menu.findItem(R.id.grpinfo).setVisible(false);
+        menu.findItem(R.id.add).setVisible(false);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

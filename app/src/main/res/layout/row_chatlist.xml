@@ -26,7 +26,8 @@
             android:id="@+id/nameonline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
             android:layout_toEndOf="@id/profileimage"
             android:layout_toRightOf="@id/profileimage"
             android:text="His Name"
@@ -38,7 +39,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/nameonline"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="9dp"
             android:layout_toEndOf="@id/profileimage"
             android:layout_toRightOf="@id/profileimage"
             android:maxLines="2"
@@ -60,6 +63,8 @@
             android:layout_below="@id/blocking"
             android:layout_alignParentEnd="true"
             android:layout_gravity="center_vertical"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="0dp"
             android:src="@drawable/ic_unblock" />
 
     </RelativeLayout>

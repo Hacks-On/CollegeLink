@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,10 +27,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ProfileFragment extends Fragment {
 
     private FirebaseAuth firebaseAuth;
@@ -42,6 +39,7 @@ public class ProfileFragment extends Fragment {
     FloatingActionButton fab;
     ProgressDialog pd;
     Button skills;
+    ActionBar actionBar;
 
     public ProfileFragment() {
         // Required empty public constructor

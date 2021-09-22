@@ -100,7 +100,6 @@ public class AdapterChatList extends RecyclerView.Adapter<AdapterChatList.Myhold
             name = itemView.findViewById(R.id.nameonline);
             lastmessage = itemView.findViewById(R.id.lastmessge);
             block = itemView.findViewById(R.id.blocking);
-            seen = itemView.findViewById(R.id.seen);
         }
     }
 }

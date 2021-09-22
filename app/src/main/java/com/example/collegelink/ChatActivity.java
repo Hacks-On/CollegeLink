@@ -17,6 +17,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -83,6 +85,7 @@ public class ChatActivity extends AppCompatActivity {
     DatabaseReference userforseen;
     List<ModelChat> chatList;
     AdapterChat adapterChat;
+    ActionBar actionBar;
 
     private static final int IMAGEPICK_GALLERY_REQUEST = 300;
     private static final int IMAGE_PICKCAMERA_REQUEST = 400;
@@ -106,7 +109,11 @@ public class ChatActivity extends AppCompatActivity {
         //ActionBar actionBar=getSupportActionBar();
         //actionBar.setDisplayShowHomeEnabled(true);
         //actionBar.setDisplayHomeAsUpEnabled(true);
-        toolbar.setTitle("");
+        getSupportActionBar().hide();
+        //actionBar.setTitle("Chat");
+        //ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+        //actionBar.setBackgroundDrawable(colorDrawable);
+        //toolbar.setTitle("");
         profile=findViewById(R.id.profiletv);
         name=findViewById(R.id.nameptv);
         userstatus=findViewById(R.id.onlinetv);

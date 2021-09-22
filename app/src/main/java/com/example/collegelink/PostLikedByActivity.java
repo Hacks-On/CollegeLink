@@ -1,6 +1,8 @@
 package com.example.collegelink;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -36,7 +38,9 @@ public class PostLikedByActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
         firebaseAuth = FirebaseAuth.getInstance();
-        actionBar.setSubtitle(firebaseAuth.getCurrentUser().getEmail());
+        //actionBar.setSubtitle(firebaseAuth.getCurrentUser().getEmail());
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         recyclerView = findViewById(R.id.likerecycle);
         Intent intent = getIntent();
         postId = intent.getStringExtra("pid");

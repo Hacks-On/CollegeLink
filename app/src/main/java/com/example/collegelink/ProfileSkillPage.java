@@ -1,9 +1,12 @@
 package com.example.collegelink;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -31,11 +34,18 @@ public class ProfileSkillPage extends AppCompatActivity {
     FirebaseDatabase fData;
     String userid;
     ArrayList<String> selection = new ArrayList<String>();
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_profile_skill_page);
+
+        actionBar = getSupportActionBar();
+        actionBar.setTitle("Update your skills");
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+        actionBar.setBackgroundDrawable(colorDrawable);
 
         mCP = findViewById(R.id.CP);
         mJavaP = findViewById(R.id.JavaP);

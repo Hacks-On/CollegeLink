@@ -2,6 +2,8 @@ package com.example.collegelink;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
@@ -88,7 +90,8 @@ public class PostDetailsActivity extends AppCompatActivity {
 
         loadUserInfo();
         setLikes();
-        actionBar.setSubtitle("SignedInAs:" + myemail);
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         loadComments();
         sendb.setOnClickListener(new View.OnClickListener() {
             @Override

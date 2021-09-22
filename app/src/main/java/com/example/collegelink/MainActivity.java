@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.nav_addpost:
-                    actionBar.setTitle("Add Post");
+                    actionBar.setTitle("Add post");
                     colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
                     actionBar.setBackgroundDrawable(colorDrawable);
                     AddpostFragment fragment4 = new AddpostFragment();
