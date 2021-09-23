@@ -18,8 +18,8 @@
 
 ### External services/libraies used :
 
-- Firebase Authentication(`implementation 'com.google.firebase:firebase-auth:19.0.0'`)
-- Firebase Realtime Database(`implementation 'com.google.firebase:firebase-database:19.0.0'`)
+- Firebase Authentication(`implementation 'com.google.firebase:firebase-auth:19.0.0'`) : This Firebase service helps in authenticating the users and logging them it/out. It is currently being done using _email_ and _password_. 
+- Firebase Realtime Database(`implementation 'com.google.firebase:firebase-database:19.0.0'`) : This Firebase service forms almost the complete back-end of this application
 - Firebase Storage(`implementation 'com.google.firebase:firebase-storage:19.0.0'`)
 - Volley library(`implementation 'com.android.volley:volley:1.1.1'`)
 - Circle Image View(`implementation 'de.hdodenhof:circleimageview:3.1.0'`)
