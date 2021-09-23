@@ -41,8 +41,16 @@ import java.util.Locale;
 
 public class PostDetailsActivity extends AppCompatActivity {
 
-
-    String hisuid, ptime, myuid, myname, myemail, mydp, uimage, postId, plike, hisdp, hisname;
+    String ptime;
+    String myuid, hisuid;
+    String myname;
+    String myemail;
+    String mydp;
+    String uimage;
+    String postId;
+    String plike;
+    String hisdp;
+    String hisname;
     ImageView picture, image;
     TextView name, time, title, description, like, tcomment;
     ImageButton more;
@@ -85,6 +93,18 @@ public class PostDetailsActivity extends AppCompatActivity {
         imagep = findViewById(R.id.commentimge);
         share = findViewById(R.id.share);
         profile = findViewById(R.id.profilelayout);
+        DatabaseReference postuid = FirebaseDatabase.getInstance().getReference("Posts").child(postId).child("uid");
+        postuid.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                hisuid = (String) snapshot.getValue();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         progressDialog = new ProgressDialog(this);
         loadPostInfo();
 
@@ -117,7 +137,7 @@ public class PostDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PostDetailsActivity.this, ChatActivity.class);
-                intent.putExtra("uid", "430G0IbYtNSvyWsC2lF2WO35IJu2");
+                intent.putExtra("uid", hisuid);
                 startActivity(intent);
             }
         });

@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeLink">
-        <activity android:name=".CreateGroupActivity"></activity>
+        <activity android:name=".NotificationsActivity"></activity>
+        <activity android:name=".CreateGroupActivity" />
         <activity android:name=".TheirProfileActivity" />
         <activity android:name=".ProfileSkillPage" />
         <activity android:name=".PostDetailsActivity" />

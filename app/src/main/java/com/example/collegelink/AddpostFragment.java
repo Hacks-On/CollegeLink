@@ -45,11 +45,6 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-
 public class AddpostFragment extends Fragment {
 
     public AddpostFragment() {
@@ -68,6 +63,7 @@ public class AddpostFragment extends Fragment {
             mKotlin, mPearl, mRuby, mAI, mML, mAndroidStudio,mIOT, mWebDev, mReactJS,
             mNodeJS, mFlutter, mFirebase, mDBMS, mDataScience, mUIUX;
     ArrayList<String> selection = new ArrayList<String>();
+    ArrayList<Object> pid = new ArrayList<Object>();
     String edititle, editdes, editimage;
     private static final int IMAGEPICK_GALLERY_REQUEST = 300;
     private static final int IMAGE_PICKCAMERA_REQUEST = 400;
@@ -77,10 +73,15 @@ public class AddpostFragment extends Fragment {
     DatabaseReference databaseReference;
     Button req;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         firebaseAuth = FirebaseAuth.getInstance();
+        uid = firebaseAuth.getCurrentUser().getUid();
+        name = firebaseAuth.getCurrentUser().getDisplayName();
+
         View view = inflater.inflate(R.layout.fragment_addpost, container, false);
 
 
@@ -377,7 +378,7 @@ public class AddpostFragment extends Fragment {
 
         // Retrieving the user data like name ,email and profile pic using query
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
-        Query query = databaseReference.orderByChild("email").equalTo(email);
+        Query query = databaseReference.orderByChild("uid").equalTo(uid);
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -415,21 +416,18 @@ public class AddpostFragment extends Fragment {
                 String titl = "" + title.getText().toString().trim();
                 String description = "" + des.getText().toString().trim();
 
-                // If empty set error
                 if (TextUtils.isEmpty(titl)) {
                     title.setError("Title Cant be empty");
                     Toast.makeText(getContext(), "Title can't be left empty", Toast.LENGTH_LONG).show();
                     return;
                 }
 
-                // If empty set error
                 if (TextUtils.isEmpty(description)) {
                     des.setError("Description Cant be empty");
                     Toast.makeText(getContext(), "Description can't be left empty", Toast.LENGTH_LONG).show();
                     return;
                 }
 
-                // If empty show error
                 if (imageuri == null) {
                     Toast.makeText(getContext(), "Select an Image", Toast.LENGTH_LONG).show();
                     return;
@@ -584,8 +582,6 @@ public class AddpostFragment extends Fragment {
                     hashMap.put("plike", "0");
                     hashMap.put("pcomments", "0");
 
-
-                    // set the data into firebase and then empty the title ,description and image data
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Posts");
                     databaseReference.child(timestamp).setValue(hashMap)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -610,6 +606,23 @@ public class AddpostFragment extends Fragment {
 
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Posts");
                     ref.child(timestamp).child("Skills").setValue(selection);
+
+                    DatabaseReference refposts = FirebaseDatabase.getInstance().getReference("Posts").child(timestamp).child("ptime");
+                    refposts.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            pid.add(dataSnapshot.getValue());
+                            DatabaseReference refskills = FirebaseDatabase.getInstance().getReference("Skills");
+                            for(int i=0;i<selection.size();i++){
+                                refskills.child(selection.get(i)).child((String) pid.get(0)).setValue(pid.get(0));
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
                 }
             }
