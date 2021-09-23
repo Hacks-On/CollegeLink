@@ -64,6 +64,13 @@
 - `ProfileSkillPage.java` : Allows the user to update their _skills_, same would be updated in the database.
 - `TheirProfileActivity.java` : Reposible for displaying the details of any user selected from the user's list.
 
+- `ModelComment.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow users to _comment on the posts_ published by other users.
+- `AdapterComment.java` : Contains various functions to transfer data between _comment classes/other classes_ and display it using whichever view required.
+
+- `Sender.java` : Contains _getters_ and _setters_ for misc. functions related to _chat_ and _notifications_.
+- `Data.java` : Contains _getters_ and _setters_ for misc. functions related to _chat_ and _notifications_.
+- `Token.java` : Contains _getters_ and _setters_ for misc. functions related to _chat_ and _notifications_.
+
 ### Please note :
 
 - First of all, connect your app to Firebase. Then, add the required Firebase SDKs for the Firebase services being used in the app(_FirebaseAuth, FirebaseDatabase, FirebaseStorage_). This can be done either by adding the required dependencies manually(these can be found at [_Firebase Documentation_](https://firebase.google.com/docs)) in the gradle files which will download the SDKs, or by using the IDE to add the SDKs automatically(go to _Tools>Firebase_ to do so).
