@@ -59,6 +59,10 @@
 - `PostLikedByActivity.java` : Responsible for _displaying a list of all the users who liked a certain post_.
 - `AddpostFragment.java` : Allows taking inputs from the user in various fields and _adds all the details in the database_ for further usage.
 
+- `ModelNotifications.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow _displaying notifications_ to every user.
+- `AdapterNotifications.java` : Contains various functions to transfer data between _notification classes_ and display it using whichever view required.
+- `NotificationsActivity.java` : Responsible for notifying a user regarding publishing of a post which matches the user's skills. It displays a list of all such notifications.
+
 - `ProfileFragment.java` : Responsible for displaying the details of the current user and allowing them to edit their _name_, _email_, _profile picture__ and _skills_.
 - `EditProfilePage.java` : Allows the user to edit their details - _name_, _email_ and _profile picture_, same would be updated in the database.
 - `ProfileSkillPage.java` : Allows the user to update their _skills_, same would be updated in the database.
@@ -78,9 +82,10 @@ Whenever an Activity or Fragment is created, an XML file is also created along w
 - `row_chat_left.xml` : Contains the design for displaying the messages of the _second person_ in the chat.
 - `row_chat_right.xml` : Contains the design for displaying the messages of the _first person(the current user)_ in the chat.
 - `row_chatlist.xml` : Contains the design of a dummy chatlist as it will be displayed in the chatbox fragment.
-- `row_comments.xml` : Contains the design of a dummy comment as it will be displayed on any post.
 - `row_posts.xml` : Contains the design of a dummy post as it will be displayed on the user's feed.
+- `row_notifications.xml` : Contains the design of a dummy notification as it will be displayed on the notifications screen.
 - `row_users.xml` : Contains the design of a dummy user as it will be displayed in the users fragment.
+- `row_comments.xml` : Contains the design of a dummy comment as it will be displayed on any post.
 
 ### Please note :
 
