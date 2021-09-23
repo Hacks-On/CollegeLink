@@ -71,6 +71,17 @@
 - `Data.java` : Contains _getters_ and _setters_ for misc. functions related to _chat_ and _notifications_.
 - `Token.java` : Contains _getters_ and _setters_ for misc. functions related to _chat_ and _notifications_.
 
+### Extra XML files created :
+
+Whenever an Activity or Fragment is created, an XML file is also created along with it which defines the design and UI elements of that activity/fragment. But, apart from those files, we have created some extra XML files as well :
+
+- `row_chat_left.xml` : Contains the design for displaying the messages of the _second person_ in the chat.
+- `row_chat_right.xml` : Contains the design for displaying the messages of the _first person(the current user)_ in the chat.
+- `row_chatlist.xml` : Contains the design of a dummy chatlist as it will be displayed in the chatbox fragment.
+- `row_comments.xml` : Contains the design of a dummy comment as it will be displayed on any post.
+- `row_posts.xml` : Contains the design of a dummy post as it will be displayed on the user's feed.
+- `row_users.xml` : Contains the design of a dummy user as it will be displayed in the users fragment.
+
 ### Please note :
 
 - First of all, connect your app to Firebase. Then, add the required Firebase SDKs for the Firebase services being used in the app(_FirebaseAuth, FirebaseDatabase, FirebaseStorage_). This can be done either by adding the required dependencies manually(these can be found at [_Firebase Documentation_](https://firebase.google.com/docs)) in the gradle files which will download the SDKs, or by using the IDE to add the SDKs automatically(go to _Tools>Firebase_ to do so).
