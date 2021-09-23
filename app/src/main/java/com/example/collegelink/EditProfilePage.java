@@ -299,14 +299,14 @@ public class EditProfilePage extends AppCompatActivity {
     // Updating name
     private void showNamephoneupdate(final String key) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Update" + key);
+        builder.setTitle("Update " + key.substring(0,1).toUpperCase()+key.substring(1));
 
         // creating a layout to write the new name
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.setPadding(10, 10, 10, 10);
         final EditText editText = new EditText(this);
-        editText.setHint("Enter" + key);
+        editText.setHint("Enter " + key.substring(0,1).toUpperCase()+key.substring(1));
         layout.addView(editText);
         builder.setView(layout);
 

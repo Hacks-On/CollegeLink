@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:backgroundTint="@color/softPink"
     android:orientation="vertical"
     app:cardBackgroundColor="@color/colorWhite"
-    app:cardCornerRadius="3dp"
+    app:cardCornerRadius="8dp"
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true"
-    app:contentPadding="5dp">
+    app:contentPadding="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,38 +27,45 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/picturetv"
                 android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_height="62dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/profile_image" />
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:textAlignment="viewEnd">
 
                 <TextView
                     android:id="@+id/unametv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:maxLength="20"
                     android:text="Name"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp" />
+                    android:fontFamily="@font/opensanssemibold"
+                    android:textSize="20sp"
+                    android:paddingTop="5dp" />
 
                 <TextView
                     android:id="@+id/utimetv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="33 min" />
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="50dp"
+                    android:paddingTop="8dp"
+                    android:text="33 min"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/darkGradient1"
+                    android:fontFamily="@font/opensansregular"
+                    android:textSize="12sp"
+                    tools:ignore="RtlCompat" />
 
             </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/morebtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:src="@drawable/ic_more" />
+
 
         </LinearLayout>
 
@@ -65,35 +73,58 @@
             android:id="@+id/ptitletv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
             android:text="Title"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/opensanssemibold"
+            android:textSize="18sp"
+            android:paddingTop="15dp"
+            android:paddingBottom="2dp" />
 
         <TextView
             android:id="@+id/descript"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description"
-            android:textColor="@color/colorBlack" />
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/darkGradient1"
+            android:textSize="16sp"
+            android:fontFamily="@font/opensansregular"
+            android:textStyle="italic"
+            android:paddingBottom="15dp" />
 
-        <ImageView
-            android:id="@+id/pimagetv"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite" />
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/pimagetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:src="@drawable/ic_img_post" />
+
+
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp">
 
             <TextView
                 android:id="@+id/plikeb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_margin="5dp"
                 android:text="1.2K Likes"
-                android:textColor="@color/colorPrimary" />
+                android:fontFamily="@font/opensansregular"
+                android:textColor="@color/darkGradient2" />
 
             <TextView
                 android:id="@+id/pcommentco"
@@ -101,35 +132,33 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="1.2K Comments"
+                android:layout_margin="5dp"
                 android:textAlignment="textEnd"
-                android:textColor="@color/colorPrimary" />
+                android:fontFamily="@font/opensansregular"
+                android:textColor="@color/darkGradient2" />
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#F5F0F0" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/like"
-                android:backgroundTint="#D91C5C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autoLink="all"
-                android:fontFamily="@font/montserrat"
                 android:background="@color/colorWhite"
+                android:backgroundTint="#D91C5C"
                 android:drawableStart="@drawable/ic_like"
                 android:drawableLeft="@drawable/ic_like"
+                android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:textColor="@color/white"
-                android:text="Like"/>
+                android:text="Like"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/comment"
@@ -137,27 +166,29 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autoLink="all"
-                android:fontFamily="@font/montserrat"
-                android:backgroundTint="#D91C5C"
-                android:textColor="@color/white"
                 android:background="@color/colorWhite"
+                android:backgroundTint="#D91C5C"
                 android:drawableStart="@drawable/ic_comment"
                 android:drawableLeft="@drawable/ic_comment"
+                android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Comment" />
+                android:text="Comment"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="129dp"
+                android:id="@+id/chatb"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:autoLink="all"
-                android:textColor="@color/white"
-                android:fontFamily="@font/montserrat"
-                android:backgroundTint="#D91C5C"
-                android:padding="7dp"
                 android:background="@color/colorWhite"
+                android:backgroundTint="#D91C5C"
                 android:drawableStart="@drawable/ic_share"
                 android:drawableLeft="@drawable/ic_share"
-                android:text="Chat" />
+                android:fontFamily="@font/montserrat"
+                android:padding="7dp"
+                android:text="Chat"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 

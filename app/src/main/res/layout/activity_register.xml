@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@drawable/background_color">
 
     <TextView
         android:id="@+id/techer"
@@ -12,12 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="111dp"
+        android:fontFamily="@font/montserrat"
         android:gravity="center"
-        android:text="Sign Up Here"
-        android:textColor="@color/colorBlack"
-        android:textSize="28sp"
-        android:textStyle="bold|italic" />
+        android:text="WELCOME!"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/names"
@@ -25,9 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/techer"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:text="Name"
-        android:textColor="@color/colorBlack" />
+        android:fontFamily="@font/opensanssemibold"
+        android:textColor="@color/lightGradient" />
 
     <EditText
         android:id="@+id/register_name"
@@ -42,7 +45,9 @@
         android:drawableStart="@drawable/name"
         android:hint="Your Name..."
         android:inputType="text"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/darkGradient1" />
 
     <TextView
         android:id="@+id/email"
@@ -52,7 +57,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
         android:text="Email"
-        android:textColor="@color/colorBlack" />
+        android:fontFamily="@font/opensanssemibold"
+        android:textColor="@color/lightGradient" />
 
     <EditText
         android:id="@+id/register_email"
@@ -67,7 +73,9 @@
         android:drawableStart="@drawable/ic_email"
         android:hint="Email..."
         android:inputType="textEmailAddress"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/darkGradient1" />
 
     <TextView
         android:id="@+id/pass"
@@ -77,7 +85,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
         android:text="Password"
-        android:textColor="@color/colorBlack" />
+        android:fontFamily="@font/opensanssemibold"
+        android:textColor="@color/lightGradient" />
 
     <EditText
         android:id="@+id/register_password"
@@ -92,22 +101,28 @@
         android:drawableStart="@drawable/password"
         android:hint="Password..."
         android:inputType="textPassword"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/darkGradient1" />
 
-    <Button
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/register_button"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_password"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/buttons"
+        android:background="@drawable/buttonborder"
+        android:backgroundTint="@color/buttonDefault"
+        android:fontFamily="@font/montserrat"
         android:padding="4dp"
-        android:text="Create Account"
+        android:text="REGISTER"
         android:textAllCaps="false"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp" />
+        android:textColor="@color/darkGradient2"
+        android:textSize="19sp" />
 
     <TextView
         android:id="@+id/homepage"
@@ -116,12 +131,13 @@
         android:layout_below="@+id/register_button"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="23dp"
-        android:text=" Already Have a Account?Sign In"
+        android:fontFamily="@font/montserrat"
+        android:text=" Already have an account? Login here!"
         android:textAlignment="center"
-        android:textColor="@color/colorBlack"
-        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

@@ -45,6 +45,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
     String myuid;
     private DatabaseReference liekeref, postref;
     boolean mprocesslike = false;
+    String hisuid;
 
     public AdapterPosts(Context context, List<ModelPost> modelPosts) {
         this.context = context;
@@ -78,7 +79,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         final String pid = modelPosts.get(position).getPtime();
         Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
         calendar.setTimeInMillis(Long.parseLong(ptime));
-        String timedate = DateFormat.format("dd/MM/yyyy hh:mm aa", calendar).toString();
+        String timedate = DateFormat.format("dd/MM/yyyy\nhh:mm aa", calendar).toString();
         holder.name.setText(nameh);
         holder.title.setText(titlee);
         holder.description.setText(descri);
@@ -97,6 +98,20 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         } catch (Exception e) {
 
         }
+
+        DatabaseReference postId = FirebaseDatabase.getInstance().getReference("Posts").child(pid).child("uid");
+        postId.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                hisuid = (String) snapshot.getValue();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,17 +150,20 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
                 });
             }
         });
-        holder.more.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showMoreOptions(holder.more, uid, myuid, ptime, image);
-            }
-        });
         holder.comment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, PostDetailsActivity.class);
                 intent.putExtra("pid", ptime);
+                context.startActivity(intent);
+            }
+        });
+
+        holder.chatbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ChatActivity.class);
+                intent.putExtra("uid", hisuid);
                 context.startActivity(intent);
             }
         });
@@ -234,7 +252,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         ImageView picture, image;
         TextView name, time, title, description, like, comments;
         ImageButton more;
-        Button likebtn, comment;
+        Button likebtn, comment, chatbtn;
         LinearLayout profile;
 
         public MyHolder(@NonNull View itemView) {
@@ -249,6 +267,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
             like = itemView.findViewById(R.id.plikeb);
             comments = itemView.findViewById(R.id.pcommentco);
             likebtn = itemView.findViewById(R.id.like);
+            chatbtn = itemView.findViewById(R.id.chatb);
             comment = itemView.findViewById(R.id.comment);
             profile = itemView.findViewById(R.id.profilelayout);
         }

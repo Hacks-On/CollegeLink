@@ -1,5 +1,6 @@
 package com.example.collegelink;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -145,7 +146,21 @@ public class UsersFragment extends Fragment {
             }
         });
 
+
+
         super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId()==R.id.notifications){
+
+            startActivity(new Intent(getContext(), NotificationsActivity.class));
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

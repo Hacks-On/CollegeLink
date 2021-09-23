@@ -38,9 +38,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Create Account");
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().hide();
+        //actionBar.setTitle("Create Account");
+        //actionBar.setDisplayShowHomeEnabled(true);
+        //actionBar.setDisplayHomeAsUpEnabled(true);
         email = findViewById(R.id.register_email);
         name = findViewById(R.id.register_name);
         password = findViewById(R.id.register_password);

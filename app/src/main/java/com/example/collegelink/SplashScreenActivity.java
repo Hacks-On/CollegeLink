@@ -26,9 +26,10 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         actionBar = getSupportActionBar();
-        actionBar.setTitle("COLLEGE LINK");
-        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
-        actionBar.setBackgroundDrawable(colorDrawable);
+        getSupportActionBar().hide();
+        //actionBar.setTitle("COLLEGE LINK");
+        //ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
+        //actionBar.setBackgroundDrawable(colorDrawable);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
@@ -51,7 +52,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                     finish();
                 }
             }
-        }, 1000);
+        }, 1500);
 
     }
 }

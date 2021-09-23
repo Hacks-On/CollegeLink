@@ -14,8 +14,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/avatartv"
             android:layout_marginTop="60dp"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:padding="2dp"
             android:src="@drawable/ic_users_light" />
@@ -31,22 +31,22 @@
             android:includeFontPadding="false"
             android:text="Dummy User"
             android:textColor="#B0FFFFFF"
-            android:textSize="30dp" />
+            android:textSize="35dp" />
 
         <TextView
             android:id="@+id/emailtv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nametv"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="80dp"
-            android:fontFamily="@font/ubuntu_light"
+            android:fontFamily="@font/opensansitalic"
             android:includeFontPadding="false"
             android:text="dummy@user.mail"
             android:textColor="#B0FFFFFF"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
 
 

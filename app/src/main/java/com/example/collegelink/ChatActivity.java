@@ -154,7 +154,7 @@ public class ChatActivity extends AppCompatActivity {
                             Calendar calendar = Calendar.getInstance();
                             calendar.setTimeInMillis(Long.parseLong(onlinestatus));
                             String timedate = DateFormat.format("dd/MM/yyyy hh:mm aa", calendar).toString();
-                            userstatus.setText("Last Seen:" + timedate);
+                            userstatus.setText("Last Seen : " + timedate);
                         }
                     }
                     name.setText(nameh);
@@ -207,7 +207,7 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
         readMessages();
-        checkisBlocked();
+        //checkisBlocked();
         seenMessgae();
     }
 

@@ -100,7 +100,7 @@ public class AddpostFragment extends Fragment {
         mR = (CheckBox) view.findViewById(R.id.Rpost);
         mSwift = (CheckBox) view.findViewById(R.id.Swiftpost);
         mGoLang = (CheckBox) view.findViewById(R.id.GoLangpost);
-        mCHash = (CheckBox) view.findViewById(R.id.CHashpost);
+        mCHash = (CheckBox) view.findViewById(R.id.Unitypost);
         mJavaScript = (CheckBox) view.findViewById(R.id.JavaScriptpost);
         mKotlin = (CheckBox) view.findViewById(R.id.Kotlinpost);
         mPearl = (CheckBox) view.findViewById(R.id.Pearlpost);
@@ -678,7 +678,7 @@ public class AddpostFragment extends Fragment {
                                         for(int j=0;j< postsids.size();j++) {
                                             databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("postid").setValue(postsids.get(j));
                                             databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("uname").setValue(publishername.get(0));
-                                            databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("description").setValue(publishername.get(0) + " added a post which might interest you.");
+                                            databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("description").setValue(publishername.get(0) + " added a post which might interest you!");
                                             System.out.println("Done");
                                         }
                                     }

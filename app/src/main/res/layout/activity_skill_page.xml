@@ -43,6 +43,7 @@
             android:text="C++"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem" />
 
         <CheckBox
@@ -53,6 +54,7 @@
             android:text="Java"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem" />
 
         <CheckBox
@@ -63,6 +65,7 @@
             android:text="Python"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
     </LinearLayout>
 
@@ -86,6 +89,7 @@
             android:text="PHP"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -96,6 +100,7 @@
             android:text="R"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -106,6 +111,7 @@
             android:text="Swift"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
     </LinearLayout>
 
@@ -129,6 +135,7 @@
             android:text="GoLang"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -139,6 +146,7 @@
             android:text="Unity"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -149,6 +157,7 @@
             android:text="JavaScript"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
     </LinearLayout>
 
@@ -172,6 +181,7 @@
             android:text="Kotlin"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -182,6 +192,7 @@
             android:text="Pearl"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -192,6 +203,7 @@
             android:text="Ruby"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
     </LinearLayout>
 
@@ -215,6 +227,7 @@
             android:text="AI"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -225,6 +238,7 @@
             android:text="ML"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -235,6 +249,7 @@
             android:text="Android Studio"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
     </LinearLayout>
 
@@ -258,6 +273,7 @@
             android:text="IOT"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -268,6 +284,7 @@
             android:text="WebDev"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -278,6 +295,7 @@
             android:onClick="selectItem"
             android:text="ReactJS"
             android:textColor="@color/white"
+            android:fontFamily="@font/opensansregular"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -301,6 +319,7 @@
             android:text="NodeJS"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -311,6 +330,7 @@
             android:text="Flutter"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -321,6 +341,7 @@
             android:text="Firebase"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
     </LinearLayout>
 
@@ -344,6 +365,7 @@
             android:text="DBMS"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -354,6 +376,7 @@
             android:text="Data Science"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
 
         <CheckBox
@@ -364,6 +387,7 @@
             android:text="UI/UX"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
             android:onClick="selectItem"/>
     </LinearLayout>
 
@@ -372,7 +396,7 @@
         android:layout_width="97dp"
         android:layout_height="45dp"
         android:background="@drawable/roundedbutton"
-        android:fontFamily="@font/ubuntu_light"
+        android:fontFamily="@font/opensansregular"
         android:text="Add"
         android:textAllCaps="false"
         android:textColor="@color/white"

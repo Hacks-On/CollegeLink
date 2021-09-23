@@ -25,7 +25,7 @@
             android:fontFamily="@font/montserrat"
             android:includeFontPadding="false"
             android:textSize="30dp"
-            android:textColor="#B0FFFFFF"/>
+            android:textColor="#FFFFFF"/>
 
 
         <EditText
@@ -55,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/edit"
             android:gravity="start"
             android:hint="Enter Description"
@@ -78,7 +79,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="C++"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -86,15 +89,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Java"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/Pythonpost"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Python"
-                android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -102,7 +99,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="R"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -110,7 +109,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PHP"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp"/>
 
         </LinearLayout>
@@ -125,7 +126,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Android Studio"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp"/>
 
             <CheckBox
@@ -133,16 +136,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Swift"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp"/>
 
             <CheckBox
-                android:id="@+id/JavaScriptpost"
+                android:id="@+id/Pythonpost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="JavaScript"
+                android:text="Python"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
-                android:textSize="20sp"/>
+                android:fontFamily="@font/opensansregular"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -156,7 +163,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="DBMS"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -164,23 +173,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="GoLang"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/CHashpost"
+                android:id="@+id/Unitypost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="C#"
+                android:text="Unity"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/Firebasepost"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Firebase"
-                android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -195,7 +200,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Data Science"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -203,7 +210,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kotlin"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -211,15 +220,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pearl"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/UIUXpost"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UI/UX"
-                android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -234,7 +237,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ML"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -242,15 +247,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="IOT"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/WebDevpost"
+                android:id="@+id/Firebasepost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="WebDev"
+                android:text="Firebase"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -258,7 +267,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ReactJS"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -273,7 +284,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="AI"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -281,15 +294,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NodeJS"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/Flutterpost"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Flutter"
-                android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -297,10 +304,59 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ruby"
+                android:buttonTint="#FFFFFF"
                 android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/WebDevpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WebDev"
+                android:buttonTint="#FFFFFF"
+                android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
                 android:textSize="20sp" />
 
         </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+            <CheckBox
+                android:id="@+id/Flutterpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flutter"
+                android:buttonTint="#FFFFFF"
+                android:textColor="@color/white"
+                android:fontFamily="@font/opensansregular"
+                android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/JavaScriptpost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JavaScript"
+            android:buttonTint="#FFFFFF"
+            android:textColor="@color/white"
+            android:fontFamily="@font/opensansregular"
+            android:textSize="20sp"/>
+
+        <CheckBox
+            android:id="@+id/UIUXpost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UI/UX"
+            android:buttonTint="#FFFFFF"
+            android:textColor="@color/white"
+            android:fontFamily="@font/opensansregular"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/requirements"

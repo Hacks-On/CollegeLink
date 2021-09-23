@@ -44,7 +44,7 @@
                     android:text="HisName"
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/opensansbold" />
 
                 <TextView
                     android:id="@+id/onlinetv"
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:text="Online"
                     android:textColor="@color/colorWhite"
-                    android:textStyle="bold" />
+                    android:textSize="11sp" />
 
             </LinearLayout>
 
@@ -98,6 +98,7 @@
             android:background="@null"
             android:hint="Start Typing"
             android:inputType="textCapSentences|textMultiLine"
+            android:fontFamily="@font/opensansregular"
             android:padding="15dp" />
 
         <ImageButton

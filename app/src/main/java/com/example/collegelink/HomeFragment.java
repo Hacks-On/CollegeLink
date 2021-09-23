@@ -159,7 +159,6 @@ public class HomeFragment extends Fragment {
         if(item.getItemId()==R.id.notifications){
 
             startActivity(new Intent(getContext(), NotificationsActivity.class));
-            
 
         }
 

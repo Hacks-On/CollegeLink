@@ -22,6 +22,8 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         app:labelVisibilityMode="labeled"
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemTextColor="#000000"
         app:menu="@menu/menu_nav">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

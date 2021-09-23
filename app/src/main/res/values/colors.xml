@@ -22,4 +22,9 @@
     <color name="neutral">#0a1b97</color>
     <color name="colordrawer">#2B2C2E</color>
     <color name="buttonDefault" >#E2BDE8</color>
+    <color name="lightGradient" >#B0FFFFFF</color>
+    <color name="darkGradient1" >#B0000000</color>
+    <color name="darkGradient2" >#A6000000</color>
+    <color name="softPink" >#F0E3F3</color>
+
 </resources>

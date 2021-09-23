@@ -4,10 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="1dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="3dp"
     android:orientation="vertical"
-    app:cardBackgroundColor="@color/colorWhite"
-    app:contentPadding="2dp">
+    android:backgroundTint="@color/softPink"
+    app:contentPadding="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,36 +20,57 @@
             android:layout_height="40dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
+            android:padding="2dp"
             android:src="@drawable/profile_image" />
 
-        <TextView
-            android:id="@+id/commentname"
+        <LinearLayout
+            android:id="@+id/row1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/loadcomment"
-            android:text="Anni"
-            android:textColor="@color/colorBlack"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="40dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/commentname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="6dp"
+                android:text="Anne"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:fontFamily="@font/opensanssemibold"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/commenttime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:text="12/06/19"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/darkGradient2"
+                android:fontFamily="@font/opensansregular"
+                android:textSize="11sp"
+                android:paddingTop="4dp"/>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/commenttext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/commentname"
+            android:layout_below="@id/row1"
             android:layout_toEndOf="@id/loadcomment"
             android:layout_toRightOf="@id/loadcomment"
+            android:fontFamily="@font/opensansregular"
+            android:paddingLeft="10dp"
             android:text="Actual Comment"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:paddingTop="3dp" />
 
-        <TextView
-            android:id="@+id/commenttime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/commenttext"
-            android:layout_toEndOf="@id/loadcomment"
-            android:layout_toRightOf="@id/loadcomment"
-            android:text="12/06/19" />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
