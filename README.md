@@ -16,6 +16,13 @@
 - Chatbox fragment(_incomplete_)
 - Home fragment(_incomplete_)
 
+### How to test this application on your system :
+
+- First of all, make sure you have [Git](https://git-scm.com/) installed in your system. Open CMD and paste - `git clone https://github.com/Hacks-On/CollegeLink`.
+- Now, open Android Studio and open the cloned project.
+- Let the gradle sync/build(some dependencies and SDKs will be downloaded and installed). Meanwhile, go to _Tools>Firebase_ and select :
+[^1] Authentication>Authentication using a custom authentication system. Connect your app to Firebase and add the FirebaseAuth SDKs to your project.
+
 ### External services/libraies used :
 
 - Firebase Authentication(`implementation 'com.google.firebase:firebase-auth:19.0.0'`) : This Firebase service helps in authenticating the users and logging them it/out. It is currently being done using _email_ and _password_. 
