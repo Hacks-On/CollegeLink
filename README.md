@@ -35,16 +35,34 @@
 
 ### Java files created :
 
-- `ModelChat.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow chat functionality between two users.
-- `AdapterChat.java` : Contains various functions to transfer data between chat classes and display it using whichever view required.
-- `ChatActivity.java` : Responsible for showing the chat screen between two users and performing various functions around it.
-- `ModelChatlist.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow displaying all the chats of the current user.
-- `AdapterChatList.java` : Contains various functions to transfer data between chatlist classes and display it using whichever view required.
-- `ChatboxFragment.java` : Responsible for displaying all the chats of the current user as received from the chatlist classes.
+- `SplashScreenActivity.java` : Responsible for displaying a _splash screen_ everytime the user opens the application.
+- `MainActivity.java` : Contains the code for creation of different fragments and the route to each of them.
+- `RegisterActivity.java` : Responsible for registering a new user using their _email_ and _password_ or redirecting an existing user to the _login page_.
+- `LoginActivity.java` : Responsible for authenticating an existing user and logging them in or redirecting them to the _register page_.
+- `SkillPage.java` : Displays various checkboxes for the user to select their relevant skills and uploads the selection in the database.
 
-- `ModelUsers.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow displaying a list of registered users.
-- `AdapterUsers.java` : Contains various functions to transfer data between user classes and display it using whichever view required.
-- `UsersFragment.java` : Responsible for displaying all the registered users as received from other user classes.
+- `ModelChat.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow _chat_ functionality between two users.
+- `AdapterChat.java` : Contains various functions to transfer data between _chat classes_ and display it using whichever view required.
+- `ChatActivity.java` : Responsible for showing the _chat screen_ between two users and performing various functions around it.
+- `ModelChatlist.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow _displaying all the chats_ of the current user.
+- `AdapterChatList.java` : Contains various functions to transfer data between _chatlist classes_ and display it using whichever view required.
+- `ChatboxFragment.java` : Responsible for _displaying all the chats_ of the current user as received from the chatlist classes.
+
+- `ModelUsers.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow _displaying a list of registered users_.
+- `AdapterUsers.java` : Contains various functions to transfer data between _user classes_ and display it using whichever view required.
+- `UsersFragment.java` : Responsible for _displaying all the registered users_ as received from other user classes.
+
+- `ModelPost.java` : Contains _getters_ and _setters_ for retrieving/assigning values to various variables required to allow _displaying all available posts_ on the homepage and other functionalities.
+- `AdapterPosts.java` : Contains various functions to transfer data between _post classes_ and display it using whichever view required.
+- `HomeFragment.java` : Responsible for displaying all the available posts with various functionalities.
+- `PostDetailsActivity.java` : Responsible for displaying the _details of any post_ which the user clicks on.
+- `PostLikedByActivity.java` : Responsible for _displaying a list of all the users who liked a certain post_.
+- `AddpostFragment.java` : Allows taking inputs from the user in various fields and _adds all the details in the database_ for further usage.
+
+- `ProfileFragment.java` : Responsible for displaying the details of the current user and allowing them to edit their _name_, _email_, _profile picture__ and _skills_.
+- `EditProfilePage.java` : Allows the user to edit their details - _name_, _email_ and _profile picture_, same would be updated in the database.
+- `ProfileSkillPage.java` : Allows the user to update their _skills_, same would be updated in the database.
+
 
 ### Please note :
 
