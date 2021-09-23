@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.nav_notifications:
-                    actionBar.setTitle("Notifications");
+                    actionBar.setTitle("Users");
                     colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
                     actionBar.setBackgroundDrawable(colorDrawable);
                     UsersFragment fragment2 = new UsersFragment();

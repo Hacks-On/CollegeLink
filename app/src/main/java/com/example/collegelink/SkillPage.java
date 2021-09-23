@@ -78,17 +78,15 @@ public class SkillPage extends AppCompatActivity {
             public void onClick(View view) {
 
                 DatabaseReference databaseReference = fData.getReference("Users");
-                /*databaseReference.child(userid).child("Skills").setValue(selection);
-
-                DatabaseReference ref = fData.getReference("Skills");
+                databaseReference.child(userid).child("Skills").setValue(selection);
+                DatabaseReference databaseReference1 = fData.getReference("Skills");
                 for(int i=0;i<selection.size();i++){
-                    ref.child(selection.get(i)).child(userid).setValue(userid);
-                }*/
-
+                    databaseReference1.child(selection.get(i)).child("Users").child(userid).setValue(userid);
+                }
                 Toast.makeText(SkillPage.this, "Added skills!", Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
+
             }
         });
     }
@@ -140,9 +138,9 @@ public class SkillPage extends AppCompatActivity {
                 break;
             case R.id.Unity:
                 if (checked)
-                    selection.add("C#");
+                    selection.add("Unity");
                 else
-                    selection.remove("C#");
+                    selection.remove("Unity");
                 break;
             case R.id.JavaScript:
                 if (checked)

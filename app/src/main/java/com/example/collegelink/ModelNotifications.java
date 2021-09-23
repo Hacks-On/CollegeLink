@@ -2,18 +2,22 @@ package com.example.collegelink;
 
 public class ModelNotifications {
     String uname;
-    String notif;
-    String timestamp;
+    String description;
 
     public String getUname() {
         return uname;
     }
 
-    public String getNotif() {
-        return notif;
+    public void setUname(String uname) {
+        this.uname = uname;
     }
 
-    public String getTimestamp() {
-        return timestamp;
+    public void setDescription(String description) {
+        this.description = description;
     }
+
+    public String getDescription() {
+        return description ;
+    }
+
 }

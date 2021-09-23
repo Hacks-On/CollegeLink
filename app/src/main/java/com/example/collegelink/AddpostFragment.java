@@ -44,6 +44,7 @@ import com.google.firebase.storage.UploadTask;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class AddpostFragment extends Fragment {
 
@@ -614,10 +615,83 @@ public class AddpostFragment extends Fragment {
                             pid.add(dataSnapshot.getValue());
                             DatabaseReference refskills = FirebaseDatabase.getInstance().getReference("Skills");
                             for(int i=0;i<selection.size();i++){
-                                refskills.child(selection.get(i)).child((String) pid.get(0)).setValue(pid.get(0));
+                                refskills.child(selection.get(i)).child("Posts").child((String) pid.get(0)).setValue(pid.get(0));
                             }
                         }
 
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+
+                    ArrayList<String> postsids = new ArrayList<String>();
+                    ArrayList<String> usersids = new ArrayList<String>();
+                    ArrayList<String> publishername = new ArrayList<String>();
+
+                    DatabaseReference databaseReference1 = FirebaseDatabase.getInstance().getReference("Skills");
+                    databaseReference1.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            HashMap<String, Object> array = new HashMap<String, Object>();
+                            array = (HashMap<String, Object>) snapshot.getValue();
+                            for(int i=0;i<selection.size();i++){
+                                for (Map.Entry<String, Object> entry : array.entrySet()){
+                                    if(selection.get(i).equals(entry.getKey())){
+                                        HashMap<Object, Object> array2 = (HashMap<Object, Object>) entry.getValue();
+                                        for (Map.Entry<Object, Object> entry2 : array2.entrySet()){
+                                            if(entry2.getKey().equals("Posts")){
+                                                HashMap<Object, Object> array3 = (HashMap<Object, Object>) entry2.getValue();
+                                                for(Object items : array3.values()){
+                                                    postsids.add((String) items);
+                                                }
+                                            }
+                                            if(entry2.getKey().equals("Users")){
+                                                HashMap<Object, Object> array4 = (HashMap<Object, Object>) entry2.getValue();
+                                                for(Object items : array4.values()){
+                                                    usersids.add((String) items);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            System.out.println("Postsid ="+postsids);
+                            System.out.println("User id = "+usersids);
+                            DatabaseReference databaseReference2 = FirebaseDatabase.getInstance().getReference("Posts");
+                            databaseReference2.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    HashMap<String, Object> array = new HashMap<String, Object>();
+                                    array = (HashMap<String, Object>) snapshot.getValue();
+                                    for(int i=0;i< postsids.size();i++){
+                                        for (Map.Entry<String, Object> entry : array.entrySet()){
+                                            if(entry.getKey().equals(postsids.get(i))){
+                                                HashMap<Object, Object> array2 = (HashMap<Object, Object>) entry.getValue();
+                                                publishername.add((String) array2.get("uname"));
+                                            }
+                                        }
+                                    }
+                                    System.out.println("name="+publishername);
+                                    DatabaseReference databaseReference3 = FirebaseDatabase.getInstance().getReference("Notification");
+                                    for(int i=0;i<usersids.size();i++){
+                                        for(int j=0;j< postsids.size();j++) {
+                                            databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("postid").setValue(postsids.get(j));
+                                            databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("uname").setValue(publishername.get(0));
+                                            databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("description").setValue(publishername.get(0) + " added a post which might interest you.");
+                                            System.out.println("Done");
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+
+
+                        }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 

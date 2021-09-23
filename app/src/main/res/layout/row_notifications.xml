@@ -13,11 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/profile_image"
-            android:id="@+id/notifyimage"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,18 +25,13 @@
                 android:text="Name"
                 android:textSize="18sp"
                 android:textColor="@color/colorBlack"/>
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/notifytext"
-                android:text="Notifications"
-                android:textColor="@color/colorBlack"/>
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/notifytime"
-                android:text="Time"
-                android:textColor="@color/colorBlack"/>
+                android:text="Notifications"
+                android:textColor="@color/colorBlack" />
         </LinearLayout>
     </LinearLayout>
 

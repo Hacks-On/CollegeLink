@@ -63,6 +63,8 @@ public class NotificationsActivity extends AppCompatActivity {
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#D91C5C"));
         actionBar.setBackgroundDrawable(colorDrawable);
 
+        userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         recyclerView = findViewById(R.id.recyclenotif);
 
         database = FirebaseDatabase.getInstance().getReference("Notification");
@@ -73,198 +75,29 @@ public class NotificationsActivity extends AppCompatActivity {
         adapterNotifications = new AdapterNotifications(this, list);
         recyclerView.setAdapter(adapterNotifications);
 
-        userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-
-        FirebaseDatabase fdata = FirebaseDatabase.getInstance();
-
-        DatabaseReference refposts = fdata.getReference("Users").child(userid).child("Skills");
-        refposts.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                selection = new ArrayList<>();
-
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    String data = snapshot.getValue(String.class);
-                    selection.add(data);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-        DatabaseReference skillsnode = fdata.getReference("Skills");
-        skillsnode.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                HashMap<String, Object> array = new HashMap<String, Object>();
-                array = (HashMap<String, Object>) dataSnapshot.getValue();
-                for (int i = 0; i < selection.size(); i++) {
-                    for (Map.Entry<String, Object> entry : array.entrySet()) {
-                        if(entry.getKey().equals(selection.get(i))){
-                            HashMap<Object, Object> array2 = (HashMap<Object, Object>) entry.getValue();
-                            String [] postid = array2.values().toArray(new String[0]);
-                            for(int j=0;j<postid.length;j++){
-                                pid.add(postid[j]);
-                            }
-                        }
-                    }
-                }
-                for(String items : pid){
-                    postdetails.add(items);
-                }
-                DatabaseReference notnode = FirebaseDatabase.getInstance().getReference("Notification");
-                for(int i=0;i<postdetails.size();i++){
-                    notnode.child(userid).child(postdetails.get(i)).setValue(postdetails.get(i));
-                }
-
-
-                DatabaseReference publishername = fdata.getReference("Posts");
-                publishername.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        HashMap<String, Object> array = new HashMap<String, Object>();
-                        array = (HashMap<String, Object>) snapshot.getValue();
-                        for(int i=0;i< postdetails.size();i++){
-                            for (Map.Entry<String, Object> entry : array.entrySet()){
-                                if(entry.getKey().equals(postdetails.get(i))){
-                                    HashMap<Object, Object> array2 = (HashMap<Object, Object>) entry.getValue();
-                                    DatabaseReference noti = FirebaseDatabase.getInstance().getReference("Notification");
-                                    noti.child(userid).child(postdetails.get(i)).child("uname").setValue(array2.get("uname"));
-                                    noti.child(userid).child(postdetails.get(i)).child("description").setValue(array2.get("uname")+" added a post which might interest you.");
-                                }
-                            }
-                        }
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-        /*DatabaseReference refposts = fdata.getReference("Users").child(userid).child("Skills");
-        refposts.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                selection = new ArrayList<>();
-
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    String data = snapshot.getValue(String.class);
-                    selection.add(data);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-        DatabaseReference skillsnode = fdata.getReference("Skills");
-        skillsnode.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                HashMap<String, Object> array = new HashMap<String, Object>();
-                array = (HashMap<String, Object>) dataSnapshot.getValue();
-                for (int i = 0; i < selection.size(); i++) {
-                    for (Map.Entry<String, Object> entry : array.entrySet()) {
-                        if(entry.getKey().equals(selection.get(i))){
-                            HashMap<Object, Object> array2 = (HashMap<Object, Object>) entry.getValue();
-                            String [] postid = array2.values().toArray(new String[0]);
-                            for(int j=0;j<postid.length;j++){
-                                pid.add(postid[j]);
-                            }
-                        }
-                    }
-                }
-                for(String items : pid){
-                    postdetails.add(items);
-                }
-                DatabaseReference notnode = FirebaseDatabase.getInstance().getReference("Notification");
-                for(int i=0;i<postdetails.size();i++){
-                    notnode.child(userid).child(postdetails.get(i)).setValue(postdetails.get(i));
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/
-
-        /*DatabaseReference post = fdata.getReference("Posts");
-        post.addValueEventListener(new ValueEventListener() {
+        DatabaseReference databaseReference2 = FirebaseDatabase.getInstance().getReference("Notification");
+        databaseReference2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-
-                HashMap<String, Object> array = new HashMap<String, Object>();
-                array = (HashMap<String, Object>) snapshot.getValue();
-                for (int i = 0; i < postdetails.size(); i++) {
-                    for (Map.Entry<String, Object> entry : array.entrySet()) {
-                        if(entry.getKey().equals(postdetails.get(i))){
-                            System.out.println(entry.getKey());
-                            System.out.println(entry.getValue());
-                        }
-                    }
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    System.out.println(dataSnapshot);
                 }
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });*/
-
-        /*DatabaseReference post = fdata.getReference("Posts");
-        post.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                HashMap<String, Object> array = new HashMap<String, Object>();
-                array = (HashMap<String, Object>) snapshot.getValue();
-                for (int i = 0; i < postdetails.size(); i++) {
-                    for (Map.Entry<String, Object> entry : array.entrySet()) {
-                        if(entry.getKey().equals(postdetails.get(i))){
-                            HashMap<String, Object> array2 = new HashMap<String, Object>();
-                            array2 = (HashMap<String, Object>) entry.getValue();
-                            for (Map.Entry<String, Object> entry2 : array2.entrySet()){
-                                if(entry2.getKey().equals("uname")){
-                                    DatabaseReference notnode = FirebaseDatabase.getInstance().getReference("Notification");
-                                    notnode.child(userid).child("uname").setValue(entry2.getValue());
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/
-
-
+        });
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for(DataSnapshot dataSnapshot : snapshot.getChildren())
+                for(DataSnapshot dataSnapshot : snapshot.child(userid).getChildren())
                 {
 
+                    System.out.println(dataSnapshot.getValue());
                     ModelNotifications modelNotifications = dataSnapshot.getValue(ModelNotifications.class);
                     list.add(modelNotifications);
 
@@ -273,8 +106,6 @@ public class NotificationsActivity extends AppCompatActivity {
                 adapterNotifications.notifyDataSetChanged();
 
             }
-
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

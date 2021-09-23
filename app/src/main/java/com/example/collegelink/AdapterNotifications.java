@@ -53,8 +53,7 @@ public class AdapterNotifications extends RecyclerView.Adapter<AdapterNotificati
 
         ModelNotifications modelNotifications = list.get(position);
         holder.name.setText(modelNotifications.getUname());
-        holder.notifa.setText(modelNotifications.getNotif());
-        holder.times.setText(modelNotifications.getTimestamp());
+        holder.notifa.setText(modelNotifications.getDescription());
 
     }
 
@@ -65,7 +64,7 @@ public class AdapterNotifications extends RecyclerView.Adapter<AdapterNotificati
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView name,notifa,times;
+        TextView name,notifa;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -73,8 +72,6 @@ public class AdapterNotifications extends RecyclerView.Adapter<AdapterNotificati
 
             name=itemView.findViewById(R.id.notifyname);
             notifa=itemView.findViewById(R.id.notifytext);
-            times=itemView.findViewById(R.id.notifytime);
-
         }
     }
 }

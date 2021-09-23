@@ -63,13 +63,6 @@ public class ProfileFragment extends Fragment {
         email = view.findViewById(R.id.emailtv);
         fab = view.findViewById(R.id.fab);
         skills=view.findViewById(R.id.profile_skill);
-        b=view.findViewById(R.id.button);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), NotificationsActivity.class));
-            }
-        });
         pd = new ProgressDialog(getActivity());
         pd.setCanceledOnTouchOutside(false);
         Query query = databaseReference.orderByChild("email").equalTo(firebaseUser.getEmail());

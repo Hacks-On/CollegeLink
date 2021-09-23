@@ -104,7 +104,7 @@ public class ProfileSkillPage extends AppCompatActivity {
                         mSwiftP.setChecked(true);
                     else if(data.equals("GoLang"))
                         mGoLangP.setChecked(true);
-                    else if(data.equals("C#"))
+                    else if(data.equals("Unity"))
                         mCHashP.setChecked(true);
                     else if(data.equals("JavaScript"))
                         mJavaScriptP.setChecked(true);
@@ -158,252 +158,167 @@ public class ProfileSkillPage extends AppCompatActivity {
             }
         });
     }
+
     public void selectItemProfile(View view) {
-        //DatabaseReference ref2 =fData.getReference("Skills");
+
+        DatabaseReference databaseReference1 = fData.getReference("Skills");
 
         boolean checked = ((CheckBox) view).isChecked();
         switch(view.getId()) {
             case R.id.CP:
                 if(checked) {
                     selection.add("C++");
-                    //ref2.child("C++").child(userid).setValue(userid);
+                    databaseReference1.child("C++").child("Users").child(userid).setValue(userid);
                 }
                 else {
                     selection.remove("C++");
-                    //ref2.child("C++").child(userid).removeValue();
+                    databaseReference1.child("C++").child("Users").child(userid).removeValue();
                 }
                 break;
             case R.id.JavaP:
                 if(checked) {
                     selection.add("Java");
-                    //ref2.child("Java").child(userid).setValue(userid);
+                    databaseReference1.child("Java").child("Users").child(userid).setValue(userid);
                 }
                 else {
                     selection.remove("Java");
-                    //ref2.child("Java").child(userid).removeValue();
+                    databaseReference1.child("Java").child("Users").child(userid).removeValue();
                 }
                 break;
             case R.id.PythonP:
-                if(checked) {
+                if(checked){
                     selection.add("Python");
-                    //ref2.child("Python").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Python");
-                    //ref2.child("Python").child(userid).removeValue();
-                }
+                    databaseReference1.child("Python").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Python");databaseReference1.child("Python").child("Users").child(userid).removeValue();}
                 break;
             case R.id.PHPP:
-                if(checked) {
-                    selection.add("PHP");
-                    //ref2.child("PHP").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("PHP");
-                    //ref2.child("PHP").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("PHP");databaseReference1.child("PHP").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("PHP");databaseReference1.child("PHP").child("Users").child(userid).removeValue();}
                 break;
             case R.id.RP:
-                if(checked) {
-                    selection.add("R");
-                    //ref2.child("R").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("R");
-                    //ref2.child("R").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("R");databaseReference1.child("R").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("R");databaseReference1.child("R").child("Users").child(userid).removeValue();}
                 break;
             case R.id.SwiftP:
-                if(checked) {
-                    selection.add("Swift");
-                    //ref2.child("Swift").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Swift");
-                    //ref2.child("Swift").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Swift");databaseReference1.child("Swift").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Swift");databaseReference1.child("Swift").child("Users").child(userid).removeValue();}
                 break;
             case R.id.GoLangP:
-                if(checked) {
-                    selection.add("GoLang");
-                    //ref2.child("GoLang").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("GoLang");
-                    //ref2.child("GoLang").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("GoLang");databaseReference1.child("GoLang").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("GoLang");databaseReference1.child("GoLang").child("Users").child(userid).removeValue();}
                 break;
             case R.id.UnityP:
-                if(checked) {
-                    selection.add("C#");
-                    //ref2.child("C#").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("C#");
-                    //ref2.child("C#").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Unity");databaseReference1.child("Unity").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Unity");databaseReference1.child("Unity").child("Users").child(userid).removeValue();}
                 break;
             case R.id.JavaSciptP:
-                if(checked) {
-                    selection.add("JavaScript");
-                    //ref2.child("JavaScript").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("JavaScript");
-                    //ref2.child("JavaScript").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("JavaScript");databaseReference1.child("JavaScript").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("JavaScript");databaseReference1.child("JavaScript").child("Users").child(userid).removeValue();}
                 break;
             case R.id.KotlinP:
-                if(checked) {
-                    selection.add("Kotlin");
-                    //ref2.child("Kotlin").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Kotlin");
-                    //ref2.child("Kotlin").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Kotlin");databaseReference1.child("Kotlin").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Kotlin");databaseReference1.child("Kotlin").child("Users").child(userid).removeValue();}
                 break;
             case R.id.PearlP:
-                if(checked) {
-                    selection.add("Pearl");
-                    //ref2.child("Pearl").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Pearl");
-                    //ref2.child("Pearl").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Pearl");databaseReference1.child("Pearl").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Pearl");databaseReference1.child("Pearl").child("Users").child(userid).removeValue();}
                 break;
             case R.id.RubyP:
-                if(checked) {
-                    selection.add("Ruby");
-                    //ref2.child("Ruby").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Ruby");
-                    //ref2.child("Ruby").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Ruby");databaseReference1.child("Ruby").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Ruby");databaseReference1.child("Ruby").child("Users").child(userid).removeValue();}
                 break;
             case R.id.AIP:
-                if(checked) {
-                    selection.add("AI");
-                    //ref2.child("AI").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("AI");
-                    //ref2.child("AI").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("AI");databaseReference1.child("AI").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("AI");databaseReference1.child("AI").child("Users").child(userid).removeValue();}
                 break;
             case R.id.MLP:
-                if(checked) {
-                    selection.add("ML");
-                    //ref2.child("ML").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("ML");
-                    //ref2.child("ML").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("ML");databaseReference1.child("ML").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("ML");databaseReference1.child("ML").child("Users").child(userid).removeValue();}
                 break;
             case R.id.AndroidStudioP:
-                if(checked) {
-                    selection.add("Android Studio");
-                    //ref2.child("Android Studio").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Android Studio");
-                    //ref2.child("Android Studio").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Android Studio");databaseReference1.child("Android Studio").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Android Studio");databaseReference1.child("Android Studio").child("Users").child(userid).removeValue();}
                 break;
             case R.id.IOTP:
-                if(checked) {
-                    selection.add("IOT");
-                    //ref2.child("IOT").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("IOT");
-                    //ref2.child("IOT").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("IOT");databaseReference1.child("IOT").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("IOT");databaseReference1.child("IOT").child("Users").child(userid).removeValue();}
                 break;
             case R.id.WebDevP:
-                if(checked) {
-                    selection.add("WebDev");
-                    //ref2.child("WebDev").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("WebDev");
-                    //ref2.child("Webdev").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("WebDev");databaseReference1.child("WebDev").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("WebDev");databaseReference1.child("WebDev").child("Users").child(userid).removeValue();}
                 break;
             case R.id.ReactJSP:
-                if(checked) {
-                    selection.add("ReactJS");
-                    //ref2.child("ReactJS").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("ReactJS");
-                    //ref2.child("ReactJS").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("ReactJS");databaseReference1.child("ReactJS").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("ReactJS");databaseReference1.child("ReactJS").child("Users").child(userid).removeValue();}
                 break;
             case R.id.NodeJSP:
-                if(checked) {
-                    selection.add("NodeJS");
-                    //ref2.child("NodeJS").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("NodeJS");
-                    //ref2.child("NodeJS").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("NodeJS");databaseReference1.child("NodeJS").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("NodeJS");databaseReference1.child("NodeJS").child("Users").child(userid).removeValue();}
                 break;
             case R.id.FlutterP:
-                if(checked) {
-                    selection.add("Flutter");
-                    //ref2.child("Flutter").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Flutter");
-                    //ref2.child("Flutter").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Flutter");databaseReference1.child("Flutter").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Flutter");databaseReference1.child("Flutter").child("Users").child(userid).removeValue();}
                 break;
             case R.id.FirebaseP:
-                if(checked) {
-                    selection.add("Firebase");
-                    //ref2.child("Firebase").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Firebase");
-                    //ref2.child("Firebase").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Firebase");databaseReference1.child("Firebase").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Firebase");databaseReference1.child("Firebase").child("Users").child(userid).removeValue();}
                 break;
             case R.id.DBMSP:
-                if(checked) {
-                    selection.add("DBMS");
-                    //ref2.child("DBMS").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("DBMS");
-                    //ref2.child("DBMS").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("DBMS");databaseReference1.child("DBMS").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("DBMS");databaseReference1.child("DBMS").child("Users").child(userid).removeValue();}
                 break;
             case R.id.DataScienceP:
-                if(checked) {
-                    selection.add("Data Science");
-                    //ref2.child("Data Science").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("Data Science");
-                    //ref2.child("Data Science").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("Data Science");databaseReference1.child("Data Science").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("Data Science");databaseReference1.child("Data Science").child("Users").child(userid).removeValue();}
                 break;
             case R.id.UIUXP:
-                if(checked) {
-                    selection.add("UI/UX");
-                    //ref2.child("UI/UX").child(userid).setValue(userid);
-                }
-                else {
-                    selection.remove("UI/UX");
-                    //ref2.child("UI/UX").child(userid).removeValue();
-                }
+                if(checked){
+                    selection.add("UI UX");databaseReference1.child("UI UX").child("Users").child(userid).setValue(userid);}
+                else{
+                    selection.remove("UI UX");databaseReference1.child("UI UX").child("Users").child(userid).removeValue();}
                 break;
         }
-
     }
+
 }

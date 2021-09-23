@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -152,6 +154,17 @@ public class HomeFragment extends Fragment {
             firebaseAuth.signOut();
             startActivity(new Intent(getContext(), SplashScreenActivity.class));
             getActivity().finish();
+        }
+
+        if(item.getItemId()==R.id.notifications){
+
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            Fragment myfrag = new NotificationsFragment();
+            fragmentTransaction.replace(R.id.nav_home, myfrag );
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
         }
 
         return super.onOptionsItemSelected(item);
