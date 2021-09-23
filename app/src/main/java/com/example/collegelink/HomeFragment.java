@@ -158,12 +158,8 @@ public class HomeFragment extends Fragment {
 
         if(item.getItemId()==R.id.notifications){
 
-            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            Fragment myfrag = new NotificationsFragment();
-            fragmentTransaction.replace(R.id.nav_home, myfrag );
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            startActivity(new Intent(getContext(), NotificationsActivity.class));
+            
 
         }
 
