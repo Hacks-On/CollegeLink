@@ -62,7 +62,7 @@
 - `ProfileFragment.java` : Responsible for displaying the details of the current user and allowing them to edit their _name_, _email_, _profile picture__ and _skills_.
 - `EditProfilePage.java` : Allows the user to edit their details - _name_, _email_ and _profile picture_, same would be updated in the database.
 - `ProfileSkillPage.java` : Allows the user to update their _skills_, same would be updated in the database.
-
+- `TheirProfileActivity.java` : Reposible for displaying the details of any user selected from the user's list.
 
 ### Please note :
 
