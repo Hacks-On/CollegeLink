@@ -137,3 +137,10 @@ Whenever an Activity or Fragment is created, an XML file is also created along w
 - Update _res>values>colors.xml_ file. This folder contains the external colors used.
 - Update _res>values>strings.xml_ file. This folder contains the external strings used.
 
+### Future enhancements :
+
+- Making different database segments for different colleges and assigning a unique key to students of a particular college. This way, this app can be uniquely used by each college throughout the world. Although, to implement this, a strong and huge database will be required. Luckily, Firebase itself offers such a service(_paid_) which can make this application production-ready.
+- Adding the feature to create a group by selecting certain users and starting a group chat.
+- Creating drop-down menus for adding a lot more skills from every tech-domain.
+- Extending the app to non-tech fields as well. A seperate space can be created for users interested in these fields and same functionalities can be implemented in that space as well.
+
