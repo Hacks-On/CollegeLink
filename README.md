@@ -113,17 +113,20 @@ College - Link is an android application wherein college students can register, 
 - `Data.java` : Contains _getters_ and _setters_ for misc. functions related to _chat_ and _notifications_.
 - `Token.java` : Contains _getters_ and _setters_ for misc. functions related to _chat_ and _notifications_.
 
+- `UserHelper.java` : Contains _getters_ and _setters_ for helping the user register/login. This file is currently _not in use_.
+
 ### Extra XML files created :
 
 Whenever an Activity or Fragment is created, an XML file is also created along with it which defines the design and UI elements of that activity/fragment. But, apart from those files, we have created some extra XML files as well :
 
 - `row_chat_left.xml` : Contains the design for displaying the messages of the _second person_ in the chat.
 - `row_chat_right.xml` : Contains the design for displaying the messages of the _first person(the current user)_ in the chat.
-- `row_chatlist.xml` : Contains the design of a dummy chatlist as it will be displayed in the chatbox fragment.
-- `row_posts.xml` : Contains the design of a dummy post as it will be displayed on the user's feed.
-- `row_notifications.xml` : Contains the design of a dummy notification as it will be displayed on the notifications screen.
-- `row_users.xml` : Contains the design of a dummy user as it will be displayed in the users fragment.
-- `row_comments.xml` : Contains the design of a dummy comment as it will be displayed on any post.
+- `row_chatlist.xml` : Contains the design of a _dummy chatlist_ as it will be displayed in the chatbox fragment.
+- `row_posts.xml` : Contains the design of a _dummy post_ as it will be displayed on the user's feed.
+- `row_notifications.xml` : Contains the design of a _dummy notification_ as it will be displayed on the notifications screen.
+- `row_users.xml` : Contains the design of a _dummy user_ as it will be displayed in the users fragment.
+- `row_comments.xml` : Contains the design of a _dummy comment_ as it will be displayed on any post.
+- `dialog_update_password.xml` : Contains the design for the _dialog box_ which pops up when the button for changing password is clicked.
 
 ### Please note :
 
