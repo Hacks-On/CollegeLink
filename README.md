@@ -32,7 +32,7 @@ College - Link is an android application wherein college students can register, 
 - Go to the _chat screen_ directly from any user's post.
 - See the _last seen_ of any user you're chatting to.
 
-### Visualizing the projct :
+### Visualizing the project :
 
 - We've made a video showcasing the application and explaining how it actually works. Watch the video [here](https://www.youtube.com/watch?v=0lw2pKzXH-c).
 - This project has been listed on [Devfolio](https://devfolio.co/). View it [here](https://devfolio.co/submissions/college-link-09c6).
