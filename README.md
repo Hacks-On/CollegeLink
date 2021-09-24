@@ -24,9 +24,9 @@ College - Link is an android application wherein college students can register, 
 ### Side features of the application :
 
 - Edit your _skills_, _name_, _email_, _password_ and _profile picture_.
-- View the number of likes and comments on every post.
+- View the number of _likes_ and _comments_ on every post.
 - See a list of _all users who liked_ a certain post.
-- See all comments on every post.
+- View all _comments_ on every post.
 - _Search for a particular post_ on the homepage using words from its title or description.
 - _Search for a particular user_ on the users page by their name or any corresponding alphabets from their name.
 - Go to the _chat screen_ directly from any user's post.
