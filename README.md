@@ -1,6 +1,25 @@
 # CollegeLink
 > Where students meet students and skills develop faster than ever!
 
+### Introduction :
+
+This project is aimed at increasing competitiveness among students(preferably college students) by creating a platform for connecting, conversing and competing in various events held worldwide.
+
+College - Link is an android application wherein college students can register, create their profiles, add their skills, connect to other students of various fields and expand their network meanwhile forming a perfect team for their next competition! Being unaware of any upcoming event is out of the question now!
+
+### Main features of the application :
+
+- Register/login using your email id and password.
+- Add your skills.
+- Add a post along with the skills associated with it.
+- View other users' posts.
+- Get notified when a post is added which matches your skill(s).
+- Like other users' posts.
+- Comment on other users' posts.
+- Chat with other users.
+- View the list of all registered users.
+- View other users' profiles.
+
 ### How to test this application on your system :
 
 - First of all, make sure you have [Git](https://git-scm.com/) installed in your system. Open CMD and paste - `git clone https://github.com/Hacks-On/CollegeLink`.
