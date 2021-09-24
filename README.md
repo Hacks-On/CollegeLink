@@ -7,7 +7,7 @@ This project is aimed at increasing competitiveness among students(preferably co
 
 College - Link is an android application wherein college students can register, create their profiles, add their skills, connect to other students of various fields and expand their network meanwhile forming a perfect team for their next competition! Being unaware of any upcoming event is out of the question now!
 
-### Main features of the application :
+## Main features of the application :
 
 - _Register/login_ using your email id and password.
 - Add your _skills_.
