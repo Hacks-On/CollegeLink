@@ -635,26 +635,29 @@ public class AddpostFragment extends Fragment {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             HashMap<String, Object> array = new HashMap<String, Object>();
                             array = (HashMap<String, Object>) snapshot.getValue();
-                            for(int i=0;i<selection.size();i++){
+                            String postid;
+                            for(int i = 0; i<selection.size(); i++){
                                 for (Map.Entry<String, Object> entry : array.entrySet()){
                                     if(selection.get(i).equals(entry.getKey())){
                                         HashMap<Object, Object> array2 = (HashMap<Object, Object>) entry.getValue();
                                         for (Map.Entry<Object, Object> entry2 : array2.entrySet()){
-                                            if(entry2.getKey().equals("Posts")){
-                                                HashMap<Object, Object> array3 = (HashMap<Object, Object>) entry2.getValue();
-                                                for(Object items : array3.values()){
-                                                    postsids.add((String) items);
-                                                }
-                                            }
+                                            postid = (timestamp);
+                                            postsids.add(postid);
                                             if(entry2.getKey().equals("Users")){
                                                 HashMap<Object, Object> array4 = (HashMap<Object, Object>) entry2.getValue();
                                                 for(Object items : array4.values()){
-                                                    usersids.add((String) items);
+                                                    if(items.equals((Object) FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+                                                        continue;
+                                                    }
+                                                    else{
+                                                        usersids.add((String) items);
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 }
+
                             }
                             System.out.println("Postsid ="+postsids);
                             System.out.println("User id = "+usersids);
@@ -664,17 +667,20 @@ public class AddpostFragment extends Fragment {
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     HashMap<String, Object> array = new HashMap<String, Object>();
                                     array = (HashMap<String, Object>) snapshot.getValue();
+                                    String name;
                                     for(int i=0;i< postsids.size();i++){
                                         for (Map.Entry<String, Object> entry : array.entrySet()){
                                             if(entry.getKey().equals(postsids.get(i))){
                                                 HashMap<Object, Object> array2 = (HashMap<Object, Object>) entry.getValue();
-                                                publishername.add((String) array2.get("uname"));
+                                                name = (String) array2.get("uname");
+                                                publishername.add(name);
                                             }
                                         }
                                     }
                                     System.out.println("name="+publishername);
                                     DatabaseReference databaseReference3 = FirebaseDatabase.getInstance().getReference("Notification");
                                     for(int i=0;i<usersids.size();i++){
+
                                         for(int j=0;j< postsids.size();j++) {
                                             databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("postid").setValue(postsids.get(j));
                                             databaseReference3.child(usersids.get(i)).child(postsids.get(j)).child("uname").setValue(publishername.get(0));
