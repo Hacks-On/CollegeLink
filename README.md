@@ -59,9 +59,9 @@ College - Link is an android application wherein college students can register, 
 - Firebase Authentication(`implementation 'com.google.firebase:firebase-auth:19.0.0'`) : This Firebase service helps in authenticating the users and logging them it/out. It is currently being done using _email_ and _password_. 
 - Firebase Realtime Database(`implementation 'com.google.firebase:firebase-database:19.0.0'`) : This Firebase service forms almost the complete back-end of this application. Almost all the data being fetched in the application is stored and retreived using this database only.
 - Firebase Storage(`implementation 'com.google.firebase:firebase-storage:19.0.0'`) : To upload images or any graphical content, we need a storage unit apart from the database for these items. This task is accomplished using Firebase Storage wherein all the images uploaded by the user(_post images_ and _profile pictures_) are stored.
-- Volley library(`implementation 'com.android.volley:volley:1.1.1'`)
-- Circle Image View(`implementation 'de.hdodenhof:circleimageview:3.1.0'`)
-- Gson library(`implementation 'com.google.code.gson:gson:2.8.6'`)
+- Volley library(`implementation 'com.android.volley:volley:1.1.1'`) : This is an _HTTP library_ aimed at making _networking_ for android apps much more easier and faster.
+- Circle Image View(`implementation 'de.hdodenhof:circleimageview:3.1.0'`) : This library is used to display any image inside a _circular_ container/frame.
+- Gson library(`implementation 'com.google.code.gson:gson:2.8.6'`) : This library is aimed at converting _JSON strings_ into their corresponding _Java objects_ and vice-versa.
 
 ### Concepts used :
 
