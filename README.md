@@ -146,3 +146,13 @@ Whenever an Activity or Fragment is created, an XML file is also created along w
 - _UI/UX improvements_ to match the modern trends of social media.
 - Improving the accessibility of _posts_, _users_ and _notifications_ and making them more detailed.
 
+### Connect with the developers :
+
+If you liked our app or want to collaborate in future projects, do connect with us :
+
+- [Kritik Modi](https://www.linkedin.com/in/kritik-modi-2b5415162/)
+- [Ritabrata Nag](https://www.linkedin.com/in/nritabrata/)
+- [Shubham Shreshth](https://www.linkedin.com/in/shubham-shreshth-83602315b/)
+- [Pururaj Singh Rajawat](https://www.linkedin.com/in/pururaj23/)
+- [Ishan Das](https://www.linkedin.com/in/ishan-das-4a21791b3/)
+
