@@ -9,21 +9,28 @@ College - Link is an android application wherein college students can register, 
 
 ### Main features of the application :
 
-- Register/login using your email id and password.
-- Add your skills.
-- Add a post along with the skills associated with it.
-- View other users' posts.
-- Get notified when a post is added which matches your skill(s).
-- Like other users' posts.
-- Comment on other users' posts.
-- Chat with other users.
-- View the list of all registered users.
-- View other users' profiles.
+- _Register/login_ using your email id and password.
+- Add your _skills_.
+- _Add a post_ along with the skills associated with it.
+- View your _feed_, where your post and other users' post will be displayed.
+- _Get notified_ when a post is added which matches your skill(s).
+- _Like_ other users' posts.
+- _Comment_ on other users' posts.
+- _Chat_ with other users.
+- _View the list_ of all registered users.
+- View _other users' profiles_.
+- Block/unblock any user.
 
 ### Side features of the application :
 
-- Edit your skills, name, email, password and profile picture.
-- See a list of all users who liked a certain post.
+- Edit your _skills_, _name_, _email_, _password_ and _profile picture_.
+- View the number of likes and comments on every post.
+- See a list of _all users who liked_ a certain post.
+- See all comments on every post.
+- _Search for a particular post_ on the homepage using words from its title or description.
+- _Search for a particular user_ on the users page by their name or any corresponding alphabets from their name.
+- Go to the _chat screen_ directly from any user's post.
+- See the _last seen_ of any user you're chatting to.
 
 ### Download the APK file :
 
@@ -44,6 +51,7 @@ College - Link is an android application wherein college students can register, 
   
 - Please note that the above step helps you connect the cloned project to your own Firebase project on the [Firebase console](https://console.firebase.google.com). You can skip this step since the application is already connected to _our_ Firebase project and the dependencies for the SDKs are already present in the gradle files(_which are being installed during gradle sync/build_).
 - Once the gradle finishes building, you're good to go. Connect Android Studio to your android device or create a virtual device using the AVD manager. Now, run the app. _Voila!_
+- If you encounter any bugs while using the application or want to suggest any improvements/features, feel free to create an _issue_ for the same and we'll look into it!
 
 ### External services/libraries used :
 
