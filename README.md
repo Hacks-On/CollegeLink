@@ -39,14 +39,14 @@ College - Link is an android application wherein college students can register, 
   
   > Cloud Storage for Firebase>Get started with Cloud Storage. Add the FirebaseStorage SDKs to your project.
   
-- Please note that the above step helps you connect the cloned project to your own Firebase project on the [Firebase console](https://console.firebase.google.com). You can skip this step since the application is already connected to our Firebase project and the dependencies for the SDKs are already present in the gradle files(_which are being installed during gradle sync/build_).
+- Please note that the above step helps you connect the cloned project to your own Firebase project on the [Firebase console](https://console.firebase.google.com). You can skip this step since the application is already connected to _our_ Firebase project and the dependencies for the SDKs are already present in the gradle files(_which are being installed during gradle sync/build_).
 - Once the gradle finishes building, you're good to go. Connect Android Studio to your android device or create a virtual device using the AVD manager. Now, run the app. _Voila!_
 
 ### External services/libraries used :
 
 - Firebase Authentication(`implementation 'com.google.firebase:firebase-auth:19.0.0'`) : This Firebase service helps in authenticating the users and logging them it/out. It is currently being done using _email_ and _password_. 
-- Firebase Realtime Database(`implementation 'com.google.firebase:firebase-database:19.0.0'`) : This Firebase service forms almost the complete back-end of this application
-- Firebase Storage(`implementation 'com.google.firebase:firebase-storage:19.0.0'`)
+- Firebase Realtime Database(`implementation 'com.google.firebase:firebase-database:19.0.0'`) : This Firebase service forms almost the complete back-end of this application. Almost all the data being fetched in the application is stored and retreived using this database only.
+- Firebase Storage(`implementation 'com.google.firebase:firebase-storage:19.0.0'`) : To upload images or any graphical content, we need a storage unit apart from the database for these items. This task is accomplished using Firebase Storage wherein all the images uploaded by the user(_post images_ and _profile pictures_) are stored.
 - Volley library(`implementation 'com.android.volley:volley:1.1.1'`)
 - Circle Image View(`implementation 'de.hdodenhof:circleimageview:3.1.0'`)
 - Gson library(`implementation 'com.google.code.gson:gson:2.8.6'`)
