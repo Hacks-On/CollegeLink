@@ -38,7 +38,7 @@ College - Link is an android application wherein college students can register, 
 - On the right-hand side of this repository, you'll find the _latest release_ of this application. You can download the apk file as well as the source code for this app by clicking on that tag.
 - You can download and install the apk file on your _android_ device [here](https://drive.google.com/file/d/1CZK77beR0V7axYgvQXRKJVFWt5seFhs9/view?usp=sharing).
 
-### How to test this application on your system :
+### How to test this application on your own system :
 
 - First of all, make sure you have [Git](https://git-scm.com/) installed in your system. Open CMD and paste - `git clone https://github.com/Hacks-On/CollegeLink`.
 - Now, open Android Studio and open the cloned project.
