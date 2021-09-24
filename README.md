@@ -36,7 +36,7 @@ College - Link is an android application wherein college students can register, 
 
 - We are currently in progress for publishing the app on Playstore so it's not available there yet.
 - On the right-hand side of this repository, you'll find the _latest release_ of this application. You can download the apk file as well as the source code for this app by clicking on that tag.
-- You can download and install the apk file on your _android_ device [here](https://drive.google.com/file/d/1CZK77beR0V7axYgvQXRKJVFWt5seFhs9/view?usp=sharing).
+- You can download and install the apk file on your _android_ device from [here](https://drive.google.com/file/d/1CZK77beR0V7axYgvQXRKJVFWt5seFhs9/view?usp=sharing) as well.
 
 ### How to test this application on your own system :
 
