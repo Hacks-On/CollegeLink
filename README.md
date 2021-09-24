@@ -1,4 +1,5 @@
 # CollegeLink
+> Where students meet students and skills develop faster than ever!
 
 ### How to test this application on your system :
 
