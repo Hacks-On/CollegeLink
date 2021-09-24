@@ -20,6 +20,8 @@ College - Link is an android application wherein college students can register, 
 - View the list of all registered users.
 - View other users' profiles.
 
+### Side features of the application :
+
 ### Download the APK file :
 
 - We are currently in progress for publishing the app on Playstore so it's not available there yet.
