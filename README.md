@@ -1,20 +1,24 @@
 # CollegeLink
+> Where students meet students and skills develop faster than ever!
 
-### This repository currently contains the source code for :
+### Introduction :
 
-- Splash screen(_incomplete_)
-- Login/register pages(_incomplete_)
-- Skills page(_complete_)
-- Homepage(_complete_)
-- Addpost fragment(_incomplete_)
-- Profile fragment(_complete_)
-- Profile skills page(_complete_)
-- Edit profile page(_complete_)
-- Notifications page(_incomplete_)
-- Users fragment(_complete_)
-- Users' profile page(_incomplete_)
-- Chatbox fragment(_incomplete_)
-- Home fragment(_incomplete_)
+This project is aimed at increasing competitiveness among students(preferably college students) by creating a platform for connecting, conversing and competing in various events held worldwide.
+
+College - Link is an android application wherein college students can register, create their profiles, add their skills, connect to other students of various fields and expand their network meanwhile forming a perfect team for their next competition! Being unaware of any upcoming event is out of the question now!
+
+### Main features of the application :
+
+- Register/login using your email id and password.
+- Add your skills.
+- Add a post along with the skills associated with it.
+- View other users' posts.
+- Get notified when a post is added which matches your skill(s).
+- Like other users' posts.
+- Comment on other users' posts.
+- Chat with other users.
+- View the list of all registered users.
+- View other users' profiles.
 
 ### How to test this application on your system :
 
@@ -31,7 +35,7 @@
 - Please note that the above step helps you connect the cloned project to your own Firebase project on the [Firebase console](https://console.firebase.google.com). You can skip this step since the application is already connected to our Firebase project and the dependencies for the SDKs are already present in the gradle files(_which are being installed during gradle sync/build_).
 - Once the gradle finishes building, you're good to go. Connect Android Studio to your android device or create a virtual device using the AVD manager. Now, run the app. _Voila!_
 
-### External services/libraies used :
+### External services/libraries used :
 
 - Firebase Authentication(`implementation 'com.google.firebase:firebase-auth:19.0.0'`) : This Firebase service helps in authenticating the users and logging them it/out. It is currently being done using _email_ and _password_. 
 - Firebase Realtime Database(`implementation 'com.google.firebase:firebase-database:19.0.0'`) : This Firebase service forms almost the complete back-end of this application
