@@ -144,4 +144,5 @@ Whenever an Activity or Fragment is created, an XML file is also created along w
 - Creating _drop-down menus for adding a lot more skills_ from every tech-domain.
 - Extending the app to _non-tech fields_ as well. A seperate space can be created for users interested in these fields and same functionalities can be implemented in that space as well.
 - _UI/UX improvements_ to match the modern trends of social media.
+- Improving the accessibility of _posts_, _users_ and _notifications_ and making them more detailed.
 
