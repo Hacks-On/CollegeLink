@@ -148,6 +148,7 @@ Whenever an Activity or Fragment is created, an XML file is also created along w
 - Making _different database segments_ for _different colleges_ and assigning a _unique key_ to students of a particular college. This way, this app can be uniquely used by each college throughout the world. Although, to implement this, a strong and huge database will be required. Luckily, Firebase itself offers such a service(_paid_) which can make this application production-ready.
 - Adding the feature to _create a group_ by selecting certain users and starting a group chat.
 - Adding _voice chat/meet_ feature.
+- Adding the feature to add _videos_ and _links_ in your posts as well.
 - Creating _drop-down menus for adding a lot more skills_ from every tech-domain.
 - Extending the app to _non-tech fields_ as well. A seperate space can be created for users interested in these fields and same functionalities can be implemented in that space as well.
 - _UI/UX improvements_ to match the modern trends of social media.
